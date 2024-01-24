@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Pliki źródłowe">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Pliki zasobów">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Pliki zasobow\song.ogg">
+      <Filter>Pliki zasobów</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Pliki nagłówkowe\Menu.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Pliki nagłówkowe\CountDown.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Pliki nagłówkowe\dependencies.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Pliki nagłówkowe\Apple.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Pliki nagłówkowe\Mushroom.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Pliki nagłówkowe\GameMode.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Pliki nagłówkowe\Snake.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Pliki nagłówkowe\Window.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Pliki nagłówkowe\Initialize.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Pliki nagłówkowe\GameOver.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Pliki nagłówkowe\EnterNickName.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Pliki źródłówe\Menu.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Pliki źródłówe\CountDown.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Pliki źródłówe\Main.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Pliki źródłówe\Apple.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Pliki źródłówe\Mushroom.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Pliki źródłówe\GameMode.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Pliki źródłówe\Snake.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Pliki źródłówe\Window.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Pliki źródłówe\Initialize.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Pliki źródłówe\GameOver.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Pliki źródłówe\EnterNickName.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Pliki zasobow\1.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="Pliki zasobow\2.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="Pliki zasobow\3.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="Pliki zasobow\apple.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="Pliki zasobow\background.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="Pliki zasobow\body.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="Pliki zasobow\favicon.ico">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="Pliki zasobow\gameover.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="Pliki zasobow\ikona.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="Pliki zasobow\leaderboard.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="Pliki zasobow\menu.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="Pliki zasobow\mode.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="Pliki zasobow\mushroom.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="Pliki zasobow\rules.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="Pliki zasobow\authors.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="Pliki zasobow\head.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Pliki zasobow\wyniki.txt">
+      <Filter>Pliki zasobów</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Pliki zasobow\burp.wav">
+      <Filter>Pliki zasobów</Filter>
+    </Media>
+    <Media Include="Pliki zasobow\chew.wav">
+      <Filter>Pliki zasobów</Filter>
+    </Media>
+  </ItemGroup>
+</Project>
