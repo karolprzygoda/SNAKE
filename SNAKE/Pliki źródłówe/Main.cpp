@@ -1,3 +1,8 @@
+/** @file Main.cpp
+* @brief G³ówny plik gry.
+*/
+
+
 #include "dependencies.h"
 #include "CountDown.h"
 #include "Menu.h"

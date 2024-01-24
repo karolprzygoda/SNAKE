@@ -1,3 +1,8 @@
+/** @file Initialize.cpp
+* @brief Implementacja klasy Initialize.
+*/
+
+
 #include "Initialize.h"
 
 void Initialize::initialize() {

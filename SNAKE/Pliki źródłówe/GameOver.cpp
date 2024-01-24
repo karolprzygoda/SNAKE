@@ -1,3 +1,8 @@
+/** @file GameOver.cpp
+* @brief Implementacja klasy GameOver.
+*/
+
+
 #include "GameOver.h"
 
 ALLEGRO_SAMPLE* GameOver::gameoverSound = NULL;

@@ -1,0 +1,89 @@
+\doxysection{Dokumentacja klasy Game\+Mode}
+\hypertarget{class_game_mode}{}\label{class_game_mode}\index{GameMode@{GameMode}}
+
+
+Klasa reprezentująca tryb gry.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Mode.\+h$>$}
+
+\doxysubsubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_game_mode_a3fb771124b2f2f2e6fbb03faf4923417}{display\+Game\+Mode}} (ALLEGRO\+\_\+\+EVENT\+\_\+\+QUEUE \texorpdfstring{$\ast$}{*}event\+\_\+queue)
+\begin{DoxyCompactList}\small\item\em Wyświetla tryb gry i przechwytuje wejście użytkownika w celu wyboru trybu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa reprezentująca tryb gry. 
+
+Definicja w linii \mbox{\hyperlink{_game_mode_8h_source_l00016}{16}} pliku \mbox{\hyperlink{_game_mode_8h_source}{Game\+Mode.\+h}}.
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_game_mode_a3fb771124b2f2f2e6fbb03faf4923417}\label{class_game_mode_a3fb771124b2f2f2e6fbb03faf4923417} 
+\index{GameMode@{GameMode}!displayGameMode@{displayGameMode}}
+\index{displayGameMode@{displayGameMode}!GameMode@{GameMode}}
+\doxysubsubsection{\texorpdfstring{displayGameMode()}{displayGameMode()}}
+{\footnotesize\ttfamily int Game\+Mode\+::display\+Game\+Mode (\begin{DoxyParamCaption}\item[{ALLEGRO\+\_\+\+EVENT\+\_\+\+QUEUE \texorpdfstring{$\ast$}{*}}]{event\+\_\+queue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Wyświetla tryb gry i przechwytuje wejście użytkownika w celu wyboru trybu. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em event\+\_\+queue} & Kolejka zdarzeń Allegro 5 do obsługi zdarzeń klawiatury. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wybrany tryb gry (np. wartość reprezentująca różne tryby gry). 
+\end{DoxyReturn}
+
+
+Definicja w linii \mbox{\hyperlink{_game_mode_8cpp_source_l00012}{12}} pliku \mbox{\hyperlink{_game_mode_8cpp_source}{Game\+Mode.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ gameModeBtm\ =\ al\_load\_bitmap(\textcolor{stringliteral}{"{}Pliki\ zasobow/gameMode.png"{}});}
+\DoxyCodeLine{00015\ \ \ \ \ running\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordflow}{while}\ (running)}
+\DoxyCodeLine{00018\ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ al\_draw\_bitmap(gameModeBtm,\ 0,\ 0,\ 0);}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ al\_flip\_display();}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ al\_get\_keyboard\_state(\&keyboard);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (al\_key\_down(\&keyboard,\ ALLEGRO\_KEY\_1))}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 5\ +\ rand()\ \%\ 5;\textcolor{comment}{//przypisz\ zmiennej\ random\ liczbe\ calkowita\ z\ przedzialu\ [5,9]}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ al\_flush\_event\_queue(event\_queue);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ running\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (al\_key\_down(\&keyboard,\ ALLEGRO\_KEY\_2))}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 10\ +\ rand()\ \%\ 5;\textcolor{comment}{//przypisz\ zmiennej\ random\ liczbe\ calkowita\ z\ przedzialu\ [10,14]}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ al\_flush\_event\_queue(event\_queue);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ running\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (al\_key\_down(\&keyboard,\ ALLEGRO\_KEY\_3))}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \ 20\ +\ rand()\ \%\ 20;\textcolor{comment}{//przypisz\ zmiennej\ random\ liczbe\ calkowita\ z\ przedzialu\ [20,39]}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ al\_flush\_event\_queue(event\_queue);}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ running\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00042\ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \}}
+
+\end{DoxyCode}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/karol/\+One\+Drive/\+Pulpit/studia/projekty/\+PROJEKTY\+\_\+\+STUDIA/\+SNAKE/\+SNAKE/\+Pliki nagłówkowe/\mbox{\hyperlink{_game_mode_8h}{Game\+Mode.\+h}}\item 
+C\+:/\+Users/karol/\+One\+Drive/\+Pulpit/studia/projekty/\+PROJEKTY\+\_\+\+STUDIA/\+SNAKE/\+SNAKE/\+Pliki źródłówe/\mbox{\hyperlink{_game_mode_8cpp}{Game\+Mode.\+cpp}}\end{DoxyCompactItemize}

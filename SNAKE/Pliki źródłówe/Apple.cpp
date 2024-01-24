@@ -1,3 +1,7 @@
+/**
+ * @file Apple.cpp
+ * @brief Implementacja klasy Apple.
+ */
 #include "Apple.h"
 
 Apple::Apple() {

@@ -1,0 +1,154 @@
+\doxysection{Dokumentacja klasy Apple}
+\hypertarget{class_apple}{}\label{class_apple}\index{Apple@{Apple}}
+
+
+Reprezentuje obiekt jabłka w grze.  
+
+
+
+
+{\ttfamily \#include $<$Apple.\+h$>$}
+
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_apple_a56503cbfbbf22ee3b51aaadae9b95efd}{randomize}} ()
+\begin{DoxyCompactList}\small\item\em Losuje nową pozycję jabłka w obrębie siatki gry. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_apple_a99933a5128baafa378b3f75e65d40497}{getX}} ()
+\begin{DoxyCompactList}\small\item\em Funkcja getter dla współrzędnej X jabłka. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_apple_aa47c347c9dd02cadeb69f3cc8642e8b1}{getY}} ()
+\begin{DoxyCompactList}\small\item\em Funkcja getter dla współrzędnej Y jabłka. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_apple_ae711ebce69bfa7165bb8b3bb28cc85cc}{Apple}} ()
+\item 
+void \mbox{\hyperlink{class_apple_a6e5430bf1e98260f3dc520270a88bcad}{display\+Apple}} ()
+\begin{DoxyCompactList}\small\item\em Wyświetla jabłko na ekranie przy użyciu funkcji Allegro 5. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Reprezentuje obiekt jabłka w grze. 
+
+Definicja w linii \mbox{\hyperlink{_apple_8h_source_l00016}{16}} pliku \mbox{\hyperlink{_apple_8h_source}{Apple.\+h}}.
+
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_apple_ae711ebce69bfa7165bb8b3bb28cc85cc}\label{class_apple_ae711ebce69bfa7165bb8b3bb28cc85cc} 
+\index{Apple@{Apple}!Apple@{Apple}}
+\index{Apple@{Apple}!Apple@{Apple}}
+\doxysubsubsection{\texorpdfstring{Apple()}{Apple()}}
+{\footnotesize\ttfamily Apple\+::\+Apple (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Konstruktor klasy \doxylink{class_apple}{Apple}. 
+
+Definicja w linii \mbox{\hyperlink{_apple_8cpp_source_l00007}{7}} pliku \mbox{\hyperlink{_apple_8cpp_source}{Apple.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{class_apple_a56503cbfbbf22ee3b51aaadae9b95efd}{randomize}}();}
+\DoxyCodeLine{00010\ \ \ \ \ appleBmp\ =\ al\_load\_bitmap(\textcolor{stringliteral}{"{}Pliki\ zasobow/apple.png"{}});}
+\DoxyCodeLine{00011\ \}}
+
+\end{DoxyCode}
+
+
+Odwołuje się do \mbox{\hyperlink{_apple_8cpp_source_l00017}{randomize()}}.
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_apple_a6e5430bf1e98260f3dc520270a88bcad}\label{class_apple_a6e5430bf1e98260f3dc520270a88bcad} 
+\index{Apple@{Apple}!displayApple@{displayApple}}
+\index{displayApple@{displayApple}!Apple@{Apple}}
+\doxysubsubsection{\texorpdfstring{displayApple()}{displayApple()}}
+{\footnotesize\ttfamily void Apple\+::display\+Apple (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Wyświetla jabłko na ekranie przy użyciu funkcji Allegro 5. 
+
+
+
+Definicja w linii \mbox{\hyperlink{_apple_8cpp_source_l00012}{12}} pliku \mbox{\hyperlink{_apple_8cpp_source}{Apple.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ al\_draw\_bitmap(appleBmp,\ x,\ y,\ 0);}
+\DoxyCodeLine{00015\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_apple_a99933a5128baafa378b3f75e65d40497}\label{class_apple_a99933a5128baafa378b3f75e65d40497} 
+\index{Apple@{Apple}!getX@{getX}}
+\index{getX@{getX}!Apple@{Apple}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily int Apple\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funkcja getter dla współrzędnej X jabłka. 
+
+\begin{DoxyReturn}{Zwraca}
+Współrzędna X jabłka. 
+\end{DoxyReturn}
+
+
+Definicja w linii \mbox{\hyperlink{_apple_8cpp_source_l00022}{22}} pliku \mbox{\hyperlink{_apple_8cpp_source}{Apple.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \{\ \textcolor{keywordflow}{return}\ x;\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_apple_aa47c347c9dd02cadeb69f3cc8642e8b1}\label{class_apple_aa47c347c9dd02cadeb69f3cc8642e8b1} 
+\index{Apple@{Apple}!getY@{getY}}
+\index{getY@{getY}!Apple@{Apple}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily int Apple\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funkcja getter dla współrzędnej Y jabłka. 
+
+\begin{DoxyReturn}{Zwraca}
+Współrzędna Y jabłka. 
+\end{DoxyReturn}
+
+
+Definicja w linii \mbox{\hyperlink{_apple_8cpp_source_l00023}{23}} pliku \mbox{\hyperlink{_apple_8cpp_source}{Apple.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023\ \{\ \textcolor{keywordflow}{return}\ y;\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_apple_a56503cbfbbf22ee3b51aaadae9b95efd}\label{class_apple_a56503cbfbbf22ee3b51aaadae9b95efd} 
+\index{Apple@{Apple}!randomize@{randomize}}
+\index{randomize@{randomize}!Apple@{Apple}}
+\doxysubsubsection{\texorpdfstring{randomize()}{randomize()}}
+{\footnotesize\ttfamily void Apple\+::randomize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Losuje nową pozycję jabłka w obrębie siatki gry. 
+
+
+
+Definicja w linii \mbox{\hyperlink{_apple_8cpp_source_l00017}{17}} pliku \mbox{\hyperlink{_apple_8cpp_source}{Apple.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ x\ =\ (1\ +\ rand()\ \%\ (30))\ *\ 20;}
+\DoxyCodeLine{00019\ \ \ \ \ y\ =\ (1\ +\ rand()\ \%\ (22))\ *\ 20;}
+\DoxyCodeLine{00020\ \}}
+
+\end{DoxyCode}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/karol/\+One\+Drive/\+Pulpit/studia/projekty/\+PROJEKTY\+\_\+\+STUDIA/\+SNAKE/\+SNAKE/\+Pliki nagłówkowe/\mbox{\hyperlink{_apple_8h}{Apple.\+h}}\item 
+C\+:/\+Users/karol/\+One\+Drive/\+Pulpit/studia/projekty/\+PROJEKTY\+\_\+\+STUDIA/\+SNAKE/\+SNAKE/\+Pliki źródłówe/\mbox{\hyperlink{_apple_8cpp}{Apple.\+cpp}}\end{DoxyCompactItemize}

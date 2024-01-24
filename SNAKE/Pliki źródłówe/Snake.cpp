@@ -1,3 +1,8 @@
+/** @file Snake.cpp
+* @brief Implementacja klasy Snake.
+*/
+
+
 #include "Snake.h"
 
 int Snake::score = 0;

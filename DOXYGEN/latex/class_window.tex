@@ -1,0 +1,64 @@
+\doxysection{Dokumentacja klasy Window}
+\hypertarget{class_window}{}\label{class_window}\index{Window@{Window}}
+
+
+Klasa reprezentująca okno gry.  
+
+
+
+
+{\ttfamily \#include $<$Window.\+h$>$}
+
+\doxysubsubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_window_aea42065b293716fc5191a04d52ab78cd}{create\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Tworzy okno gry o zdefiniowanej szerokości i wysokości. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa reprezentująca okno gry. 
+
+Definicja w linii \mbox{\hyperlink{_window_8h_source_l00016}{16}} pliku \mbox{\hyperlink{_window_8h_source}{Window.\+h}}.
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_window_aea42065b293716fc5191a04d52ab78cd}\label{class_window_aea42065b293716fc5191a04d52ab78cd} 
+\index{Window@{Window}!createWindow@{createWindow}}
+\index{createWindow@{createWindow}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{createWindow()}{createWindow()}}
+{\footnotesize\ttfamily void Window\+::create\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Tworzy okno gry o zdefiniowanej szerokości i wysokości. 
+
+
+
+Definicja w linii \mbox{\hyperlink{_window_8cpp_source_l00011}{11}} pliku \mbox{\hyperlink{_window_8cpp_source}{Window.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ ALLEGRO\_BITMAP*\ ikona\ =\ al\_load\_bitmap(\textcolor{stringliteral}{"{}Pliki\ zasobow/ikona.png"{}});}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ HWND\ window;\textcolor{comment}{//stworzenie\ zmiennej\ window\ "{}uchwytu\ okna"{}}}
+\DoxyCodeLine{00016\ \ \ \ \ AllocConsole();\textcolor{comment}{//procedura\ iniciujaca\ standardowe\ wejscia\ i\ wyjscia\ konsoli}}
+\DoxyCodeLine{00017\ \ \ \ \ window\ =\ FindWindowA(\textcolor{stringliteral}{"{}ConsoleWindowClass"{}},\ NULL);\textcolor{comment}{//przypisanie\ konsoli\ do\ zmiennej\ window}}
+\DoxyCodeLine{00018\ \ \ \ \ ShowWindow(window,\ 0);\textcolor{comment}{//funkcja\ ukrywajaca\ konsole\ poprzez\ drugi\ argument}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ disp\ =\ al\_create\_display(width,\ height);}
+\DoxyCodeLine{00021\ \ \ \ \ al\_set\_window\_position(disp,\ 520,\ 200);}
+\DoxyCodeLine{00022\ \ \ \ \ al\_set\_window\_title(disp,\ \textcolor{stringliteral}{"{}snake\_3ID14A"{}});}
+\DoxyCodeLine{00023\ \ \ \ \ al\_set\_display\_icon(disp,\ ikona);}
+\DoxyCodeLine{00024\ \}}
+
+\end{DoxyCode}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/karol/\+One\+Drive/\+Pulpit/studia/projekty/\+PROJEKTY\+\_\+\+STUDIA/\+SNAKE/\+SNAKE/\+Pliki nagłówkowe/\mbox{\hyperlink{_window_8h}{Window.\+h}}\item 
+C\+:/\+Users/karol/\+One\+Drive/\+Pulpit/studia/projekty/\+PROJEKTY\+\_\+\+STUDIA/\+SNAKE/\+SNAKE/\+Pliki źródłówe/\mbox{\hyperlink{_window_8cpp}{Window.\+cpp}}\end{DoxyCompactItemize}

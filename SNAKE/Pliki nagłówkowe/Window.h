@@ -15,10 +15,14 @@
   */
 class Window {
 private:
-	static const int width = 640;/**< Szerokoœæ okna gry. */
-	static const int height = 480;/**< Wysokoœæ okna gry. */
-	static ALLEGRO_DISPLAY* disp;/**< WskaŸnik do obiektu wyœwietlacza Allegro 5. */
-	static ALLEGRO_BITMAP* ikona; /**< WskaŸnik do obiektu bitmapy Allegro 5 reprezentuj¹cego ikonê okna. */
+	/**< Szerokoœæ okna gry. */
+	static const int width = 640;
+	/**< Wysokoœæ okna gry. */
+	static const int height = 480;
+	/**< WskaŸnik do obiektu wyœwietlacza Allegro 5. */
+	static ALLEGRO_DISPLAY* disp;
+	/**< WskaŸnik do obiektu bitmapy Allegro 5 reprezentuj¹cego ikonê okna. */
+	static ALLEGRO_BITMAP* ikona; 
 public:
 	/**
 	 * @brief Tworzy okno gry o zdefiniowanej szerokoœci i wysokoœci.

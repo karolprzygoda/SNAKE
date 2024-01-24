@@ -1,0 +1,523 @@
+\doxysection{Dokumentacja klasy Snake}
+\hypertarget{class_snake}{}\label{class_snake}\index{Snake@{Snake}}
+
+
+Klasa reprezentująca obiekt węża w grze.  
+
+
+
+
+{\ttfamily \#include $<$Snake.\+h$>$}
+
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_snake_aa9cbcdb4b25d84cbf83509039cac8d01}{Snake}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_snake}{Snake}. Inicjalizuje początkowe ustawienia węża. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_snake_a4a73b9765d6d5fe09e90d55dd200ee69}{display\+Snake}} ()
+\begin{DoxyCompactList}\small\item\em Wyświetla węża na ekranie. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_snake_a1167820ead0879ef7076a327b231018b}{move\+Snake}} (\mbox{\hyperlink{class_apple}{Apple}} \texorpdfstring{$\ast$}{*}apple, std\+::vector$<$ \mbox{\hyperlink{class_mushroom}{Mushroom}} \texorpdfstring{$\ast$}{*} $>$ mushrooms)
+\begin{DoxyCompactList}\small\item\em Porusza wężem na planszy, uwzględniając kolizje. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_snake_a7aee0ab8b45446d0736423b51fd077da}{getX}} ()
+\begin{DoxyCompactList}\small\item\em Zwraca współrzędną X głowy węża. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_snake_aa7bb36db425d5588349de8a8d5b278cf}{getY}} ()
+\begin{DoxyCompactList}\small\item\em Zwraca współrzędną Y głowy węża. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_snake_a67c7207751c0e51ab6ed56e180f20eef}{randomize}} ()
+\begin{DoxyCompactList}\small\item\em Losuje nową pozycję węża na planszy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_snake_a3537b323550e6034df0a19712d63f3ba}{key\+Assignment}} ()
+\begin{DoxyCompactList}\small\item\em Przypisuje klawisze do sterowania wężem. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_snake_a16a910b7a87a6e73c2f60c40971e0d12}{initialize\+Snake}} ()
+\begin{DoxyCompactList}\small\item\em Inicjalizuje węża na początku gry. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_snake_aa140a5df9db8650b95ce4fc1d3146d21}{check\+Collision\+With\+Apple}} (\mbox{\hyperlink{class_apple}{Apple}} \texorpdfstring{$\ast$}{*}apple, \mbox{\hyperlink{struct_point}{Point}} new\+Segment, \mbox{\hyperlink{struct_point}{Point}} new\+Head)
+\begin{DoxyCompactList}\small\item\em Sprawdza kolizję z jabłkiem i aktualizuje wynik gry. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_snake_a2a98b43654f9d3ddaca5a0a5a3533047}{chceck\+Collision\+With\+Wall}} (\mbox{\hyperlink{struct_point}{Point}} new\+Head)
+\begin{DoxyCompactList}\small\item\em Sprawdza kolizję z ścianą planszy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_snake_ac2ef0a2d37cf8dec668dcc36cab9f0e1}{chceck\+Collision\+With\+Itself}} (\mbox{\hyperlink{struct_point}{Point}} new\+Head)
+\begin{DoxyCompactList}\small\item\em Sprawdza kolizję z samym sobą. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_snake_af26a9e434776eab4c5cc2aafb4bda1e4}{check\+Collision\+With\+Mushroom}} (std\+::vector$<$ \mbox{\hyperlink{class_mushroom}{Mushroom}} \texorpdfstring{$\ast$}{*} $>$ mushrooms, \mbox{\hyperlink{struct_point}{Point}} new\+Head)
+\begin{DoxyCompactList}\small\item\em Sprawdza kolizję z grzybami. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_snake_a64e2461770688f757b363125a79e8bcd}{move\+Snake\+With\+Tweening}} (\mbox{\hyperlink{class_apple}{Apple}} \texorpdfstring{$\ast$}{*}apple, std\+::vector$<$ \mbox{\hyperlink{class_mushroom}{Mushroom}} \texorpdfstring{$\ast$}{*} $>$ mushrooms, double elapsed\+Time)
+\begin{DoxyCompactList}\small\item\em Porusza wężem z uwzględnieniem animacji (tweening). \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_snake_adaa30b3e9b9b86e3513cab7bd82153f9}{lerp}} (float a, float b, float t)
+\begin{DoxyCompactList}\small\item\em Funkcja interpolacji liniowej. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_snake_abaf57bf328fb35afc354dae6daf5bfd8}{nick\+Name}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_snake_ae5b13aadb0092ce8c45e04de9024444f}{score}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa reprezentująca obiekt węża w grze. 
+
+Definicja w linii \mbox{\hyperlink{_snake_8h_source_l00030}{30}} pliku \mbox{\hyperlink{_snake_8h_source}{Snake.\+h}}.
+
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_snake_aa9cbcdb4b25d84cbf83509039cac8d01}\label{class_snake_aa9cbcdb4b25d84cbf83509039cac8d01} 
+\index{Snake@{Snake}!Snake@{Snake}}
+\index{Snake@{Snake}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{Snake()}{Snake()}}
+{\footnotesize\ttfamily Snake\+::\+Snake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Konstruktor klasy \doxylink{class_snake}{Snake}. Inicjalizuje początkowe ustawienia węża. 
+
+
+
+Definicja w linii \mbox{\hyperlink{_snake_8cpp_source_l00010}{10}} pliku \mbox{\hyperlink{_snake_8cpp_source}{Snake.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ dir\ =\ DOWN;}
+\DoxyCodeLine{00012\ \ \ \ \ bodyBmp\ =\ al\_load\_bitmap(\textcolor{stringliteral}{"{}Pliki\ zasobow/body.png"{}});}
+\DoxyCodeLine{00013\ \ \ \ \ eatingSound\ =\ al\_load\_sample(\textcolor{stringliteral}{"{}Pliki\ zasobow/chew.wav"{}});}
+\DoxyCodeLine{00014\ \ \ \ \ headBmp\ =\ al\_load\_bitmap(\textcolor{stringliteral}{"{}Pliki\ zasobow/head.png"{}});}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_snake_a16a910b7a87a6e73c2f60c40971e0d12}{initializeSnake}}();}
+\DoxyCodeLine{00016\ \}}
+
+\end{DoxyCode}
+
+
+Odwołuje się do \mbox{\hyperlink{_snake_8cpp_source_l00132}{initialize\+Snake()}}.
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_snake_ac2ef0a2d37cf8dec668dcc36cab9f0e1}\label{class_snake_ac2ef0a2d37cf8dec668dcc36cab9f0e1} 
+\index{Snake@{Snake}!chceckCollisionWithItself@{chceckCollisionWithItself}}
+\index{chceckCollisionWithItself@{chceckCollisionWithItself}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{chceckCollisionWithItself()}{chceckCollisionWithItself()}}
+{\footnotesize\ttfamily void Snake\+::chceck\+Collision\+With\+Itself (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_point}{Point}}}]{new\+Head }\end{DoxyParamCaption})}
+
+
+
+Sprawdza kolizję z samym sobą. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em new\+Head} & Nowa głowa węża. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{_snake_8cpp_source_l00094}{94}} pliku \mbox{\hyperlink{_snake_8cpp_source}{Snake.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00095\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ body.size();\ i++)}
+\DoxyCodeLine{00097\ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (newHead.\mbox{\hyperlink{struct_point_a8c779e11e694b20e0946105a9f5de842}{x}}\ ==\ body[i].x\ \&\&\ newHead.\mbox{\hyperlink{struct_point_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y}}\ ==\ body[i].y)}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_over_a0f8277d90ecf79cfd9aa7cfe0e5d8966}{GameOver::displayGameOver}}(\mbox{\hyperlink{class_snake_ae5b13aadb0092ce8c45e04de9024444f}{Snake::score}},\ \mbox{\hyperlink{class_snake_abaf57bf328fb35afc354dae6daf5bfd8}{nickName}});}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ \ \ \ \ \}}
+\DoxyCodeLine{00103\ \}}
+
+\end{DoxyCode}
+
+
+Odwołuje się do \mbox{\hyperlink{_game_over_8cpp_source_l00012}{Game\+Over\+::display\+Game\+Over()}}, \mbox{\hyperlink{_snake_8h_source_l00050}{nick\+Name}}, \mbox{\hyperlink{_snake_8h_source_l00118}{score}}, \mbox{\hyperlink{_snake_8h_source_l00021}{Point\+::x}} i \mbox{\hyperlink{_snake_8h_source_l00023}{Point\+::y}}.
+
+\Hypertarget{class_snake_a2a98b43654f9d3ddaca5a0a5a3533047}\label{class_snake_a2a98b43654f9d3ddaca5a0a5a3533047} 
+\index{Snake@{Snake}!chceckCollisionWithWall@{chceckCollisionWithWall}}
+\index{chceckCollisionWithWall@{chceckCollisionWithWall}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{chceckCollisionWithWall()}{chceckCollisionWithWall()}}
+{\footnotesize\ttfamily void Snake\+::chceck\+Collision\+With\+Wall (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_point}{Point}}}]{new\+Head }\end{DoxyParamCaption})}
+
+
+
+Sprawdza kolizję z ścianą planszy. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em new\+Head} & Nowa głowa węża. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{_snake_8cpp_source_l00086}{86}} pliku \mbox{\hyperlink{_snake_8cpp_source}{Snake.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00087\ \{\ \ \ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordflow}{if}\ (newHead.\mbox{\hyperlink{struct_point_a8c779e11e694b20e0946105a9f5de842}{x}}\ ==\ 0\ ||\ newHead.\mbox{\hyperlink{struct_point_a8c779e11e694b20e0946105a9f5de842}{x}}\ ==\ 620\ ||\ newHead.\mbox{\hyperlink{struct_point_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y}}\ ==\ 0\ ||\ newHead.\mbox{\hyperlink{struct_point_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y}}\ ==\ 460)}
+\DoxyCodeLine{00089\ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_over_a0f8277d90ecf79cfd9aa7cfe0e5d8966}{GameOver::displayGameOver}}(\mbox{\hyperlink{class_snake_ae5b13aadb0092ce8c45e04de9024444f}{Snake::score}},\ \mbox{\hyperlink{class_snake_abaf57bf328fb35afc354dae6daf5bfd8}{nickName}});}
+\DoxyCodeLine{00091\ \ \ \ \ \}}
+\DoxyCodeLine{00092\ \}}
+
+\end{DoxyCode}
+
+
+Odwołuje się do \mbox{\hyperlink{_game_over_8cpp_source_l00012}{Game\+Over\+::display\+Game\+Over()}}, \mbox{\hyperlink{_snake_8h_source_l00050}{nick\+Name}}, \mbox{\hyperlink{_snake_8h_source_l00118}{score}}, \mbox{\hyperlink{_snake_8h_source_l00021}{Point\+::x}} i \mbox{\hyperlink{_snake_8h_source_l00023}{Point\+::y}}.
+
+\Hypertarget{class_snake_aa140a5df9db8650b95ce4fc1d3146d21}\label{class_snake_aa140a5df9db8650b95ce4fc1d3146d21} 
+\index{Snake@{Snake}!checkCollisionWithApple@{checkCollisionWithApple}}
+\index{checkCollisionWithApple@{checkCollisionWithApple}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{checkCollisionWithApple()}{checkCollisionWithApple()}}
+{\footnotesize\ttfamily void Snake\+::check\+Collision\+With\+Apple (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_apple}{Apple}} \texorpdfstring{$\ast$}{*}}]{apple,  }\item[{\mbox{\hyperlink{struct_point}{Point}}}]{new\+Segment,  }\item[{\mbox{\hyperlink{struct_point}{Point}}}]{new\+Head }\end{DoxyParamCaption})}
+
+
+
+Sprawdza kolizję z jabłkiem i aktualizuje wynik gry. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em apple} & Wskaźnik do obiektu klasy \doxylink{class_apple}{Apple} reprezentującego jabłko. \\
+\hline
+{\em new\+Segment} & Nowy segment dodawany do ciała węża. \\
+\hline
+{\em new\+Head} & Nowa głowa węża. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{_snake_8cpp_source_l00074}{74}} pliku \mbox{\hyperlink{_snake_8cpp_source}{Snake.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00075\ \{}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordflow}{if}\ (newHead.\mbox{\hyperlink{struct_point_a8c779e11e694b20e0946105a9f5de842}{x}}\ ==\ apple-\/>\mbox{\hyperlink{class_apple_a99933a5128baafa378b3f75e65d40497}{getX}}()\ \&\&\ newHead.\mbox{\hyperlink{struct_point_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y}}\ ==\ apple-\/>\mbox{\hyperlink{class_apple_aa47c347c9dd02cadeb69f3cc8642e8b1}{getY}}())}
+\DoxyCodeLine{00078\ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ al\_play\_sample(eatingSound,\ 1,\ 0,\ 1,\ ALLEGRO\_PLAYMODE\_ONCE,\ 0);}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ body.insert(body.begin()\ +\ 1,\ newSegment);}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ apple-\/>\mbox{\hyperlink{class_apple_a56503cbfbbf22ee3b51aaadae9b95efd}{randomize}}();}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_snake_ae5b13aadb0092ce8c45e04de9024444f}{score}}++;}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+\DoxyCodeLine{00084\ \}}
+
+\end{DoxyCode}
+
+
+Odwołuje się do \mbox{\hyperlink{_apple_8cpp_source_l00022}{Apple\+::get\+X()}}, \mbox{\hyperlink{_apple_8cpp_source_l00023}{Apple\+::get\+Y()}}, \mbox{\hyperlink{_apple_8cpp_source_l00017}{Apple\+::randomize()}}, \mbox{\hyperlink{_snake_8h_source_l00118}{score}}, \mbox{\hyperlink{_snake_8h_source_l00021}{Point\+::x}} i \mbox{\hyperlink{_snake_8h_source_l00023}{Point\+::y}}.
+
+\Hypertarget{class_snake_af26a9e434776eab4c5cc2aafb4bda1e4}\label{class_snake_af26a9e434776eab4c5cc2aafb4bda1e4} 
+\index{Snake@{Snake}!checkCollisionWithMushroom@{checkCollisionWithMushroom}}
+\index{checkCollisionWithMushroom@{checkCollisionWithMushroom}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{checkCollisionWithMushroom()}{checkCollisionWithMushroom()}}
+{\footnotesize\ttfamily void Snake\+::check\+Collision\+With\+Mushroom (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_mushroom}{Mushroom}} \texorpdfstring{$\ast$}{*} $>$}]{mushrooms,  }\item[{\mbox{\hyperlink{struct_point}{Point}}}]{new\+Head }\end{DoxyParamCaption})}
+
+
+
+Sprawdza kolizję z grzybami. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em mushrooms} & Wektor wskaźników do obiektów klasy \doxylink{class_mushroom}{Mushroom} reprezentujących grzyby. \\
+\hline
+{\em new\+Head} & Nowa głowa węża. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{_snake_8cpp_source_l00105}{105}} pliku \mbox{\hyperlink{_snake_8cpp_source}{Snake.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00106\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ mushroom\ :\ mushrooms)\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (newHead.\mbox{\hyperlink{struct_point_a8c779e11e694b20e0946105a9f5de842}{x}}\ ==\ mushroom-\/>getX()\ \&\&\ newHead.\mbox{\hyperlink{struct_point_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y}}\ ==\ mushroom-\/>getY())}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_over_a0f8277d90ecf79cfd9aa7cfe0e5d8966}{GameOver::displayGameOver}}(\mbox{\hyperlink{class_snake_ae5b13aadb0092ce8c45e04de9024444f}{Snake::score}},\ \mbox{\hyperlink{class_snake_abaf57bf328fb35afc354dae6daf5bfd8}{nickName}});}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00112\ \ \ \ \ \}}
+\DoxyCodeLine{00113\ \}}
+
+\end{DoxyCode}
+
+
+Odwołuje się do \mbox{\hyperlink{_game_over_8cpp_source_l00012}{Game\+Over\+::display\+Game\+Over()}}, \mbox{\hyperlink{_snake_8h_source_l00050}{nick\+Name}}, \mbox{\hyperlink{_snake_8h_source_l00118}{score}}, \mbox{\hyperlink{_snake_8h_source_l00021}{Point\+::x}} i \mbox{\hyperlink{_snake_8h_source_l00023}{Point\+::y}}.
+
+\Hypertarget{class_snake_a4a73b9765d6d5fe09e90d55dd200ee69}\label{class_snake_a4a73b9765d6d5fe09e90d55dd200ee69} 
+\index{Snake@{Snake}!displaySnake@{displaySnake}}
+\index{displaySnake@{displaySnake}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{displaySnake()}{displaySnake()}}
+{\footnotesize\ttfamily void Snake\+::display\+Snake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Wyświetla węża na ekranie. 
+
+
+
+Definicja w linii \mbox{\hyperlink{_snake_8cpp_source_l00018}{18}} pliku \mbox{\hyperlink{_snake_8cpp_source}{Snake.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{float}\ centerX\ =\ al\_get\_bitmap\_width(headBmp)\ /\ 2.0f;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{float}\ centerY\ =\ al\_get\_bitmap\_height(headBmp)\ /\ 2.0f;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ al\_draw\_scaled\_rotated\_bitmap(headBmp,\ centerX,\ centerY,}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ body.front().x\ +\ centerX,\ body.front().y\ +\ centerY,}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ 1.0,\ 1.0,\ angle,\ 0);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//\ Wyświetl\ resztę\ ciała\ węża}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 1;\ i\ <\ body.size();\ ++i)\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ al\_draw\_bitmap(bodyBmp,\ body[i].x,\ body[i].y,\ 0);}
+\DoxyCodeLine{00030\ \ \ \ \ \}}
+\DoxyCodeLine{00031\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_snake_a7aee0ab8b45446d0736423b51fd077da}\label{class_snake_a7aee0ab8b45446d0736423b51fd077da} 
+\index{Snake@{Snake}!getX@{getX}}
+\index{getX@{getX}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily int Snake\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Zwraca współrzędną X głowy węża. 
+
+\begin{DoxyReturn}{Zwraca}
+Współrzędna X głowy węża. 
+\end{DoxyReturn}
+\Hypertarget{class_snake_aa7bb36db425d5588349de8a8d5b278cf}\label{class_snake_aa7bb36db425d5588349de8a8d5b278cf} 
+\index{Snake@{Snake}!getY@{getY}}
+\index{getY@{getY}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily int Snake\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Zwraca współrzędną Y głowy węża. 
+
+\begin{DoxyReturn}{Zwraca}
+Współrzędna Y głowy węża. 
+\end{DoxyReturn}
+\Hypertarget{class_snake_a16a910b7a87a6e73c2f60c40971e0d12}\label{class_snake_a16a910b7a87a6e73c2f60c40971e0d12} 
+\index{Snake@{Snake}!initializeSnake@{initializeSnake}}
+\index{initializeSnake@{initializeSnake}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{initializeSnake()}{initializeSnake()}}
+{\footnotesize\ttfamily void Snake\+::initialize\+Snake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicjalizuje węża na początku gry. 
+
+
+
+Definicja w linii \mbox{\hyperlink{_snake_8cpp_source_l00132}{132}} pliku \mbox{\hyperlink{_snake_8cpp_source}{Snake.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{comment}{//\ Ustawienie\ początkowej\ pozycji\ węża}}
+\DoxyCodeLine{00134\ \ \ \ \ \mbox{\hyperlink{struct_point}{Point}}\ start;}
+\DoxyCodeLine{00135\ \ \ \ \ start.\mbox{\hyperlink{struct_point_a8c779e11e694b20e0946105a9f5de842}{x}}\ =\ (1\ +\ rand()\ \%\ (27))\ *\ 20;\ \ \textcolor{comment}{//\ Ustawienie\ startowej\ współrzędnej\ x}}
+\DoxyCodeLine{00136\ \ \ \ \ start.\mbox{\hyperlink{struct_point_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y}}\ =\ (1\ +\ rand()\ \%\ (18))\ *\ 20;\ \ \textcolor{comment}{//\ Ustawienie\ startowej\ współrzędnej\ y}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{comment}{//\ Dodanie\ pierwszego\ segmentu\ do\ węża}}
+\DoxyCodeLine{00139\ \ \ \ \ body.push\_back(start);}
+\DoxyCodeLine{00140\ \}}
+
+\end{DoxyCode}
+
+
+Odwołuje się do \mbox{\hyperlink{_snake_8h_source_l00021}{Point\+::x}} i \mbox{\hyperlink{_snake_8h_source_l00023}{Point\+::y}}.
+
+\Hypertarget{class_snake_a3537b323550e6034df0a19712d63f3ba}\label{class_snake_a3537b323550e6034df0a19712d63f3ba} 
+\index{Snake@{Snake}!keyAssignment@{keyAssignment}}
+\index{keyAssignment@{keyAssignment}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{keyAssignment()}{keyAssignment()}}
+{\footnotesize\ttfamily void Snake\+::key\+Assignment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Przypisuje klawisze do sterowania wężem. 
+
+
+
+Definicja w linii \mbox{\hyperlink{_snake_8cpp_source_l00115}{115}} pliku \mbox{\hyperlink{_snake_8cpp_source}{Snake.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ al\_get\_keyboard\_state(\&keyboard);}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordflow}{if}\ (al\_key\_down(\&keyboard,\ ALLEGRO\_KEY\_RIGHT)\ \&\&\ dir\ !=\ LEFT)\textcolor{comment}{//implementacja\ ruchu\ w\ prawo}}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ dir\ =\ RIGHT;}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordflow}{if}\ (al\_key\_down(\&keyboard,\ ALLEGRO\_KEY\_LEFT)\ \&\&\ dir\ !=\ RIGHT)\textcolor{comment}{//implementacja\ ruchu\ w\ lewo}}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ dir\ =\ LEFT;}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordflow}{if}\ (al\_key\_down(\&keyboard,\ ALLEGRO\_KEY\_DOWN)\ \&\&\ dir\ !=\ UP)\textcolor{comment}{//implementacja\ ruchu\ w\ dol}}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ dir\ =\ DOWN;}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordflow}{if}\ (al\_key\_down(\&keyboard,\ ALLEGRO\_KEY\_UP)\ \&\&\ dir\ !=\ DOWN)\textcolor{comment}{//implementacja\ ruchu\ w\ gore}}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ dir\ =\ UP;}
+\DoxyCodeLine{00130\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_snake_adaa30b3e9b9b86e3513cab7bd82153f9}\label{class_snake_adaa30b3e9b9b86e3513cab7bd82153f9} 
+\index{Snake@{Snake}!lerp@{lerp}}
+\index{lerp@{lerp}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{lerp()}{lerp()}}
+{\footnotesize\ttfamily float Snake\+::lerp (\begin{DoxyParamCaption}\item[{float}]{a,  }\item[{float}]{b,  }\item[{float}]{t }\end{DoxyParamCaption})}
+
+
+
+Funkcja interpolacji liniowej. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em a} & Początkowa wartość. \\
+\hline
+{\em b} & Końcowa wartość. \\
+\hline
+{\em t} & Wartość od 0.\+0 do 1.\+0 określająca stopień interpolacji. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wynik interpolacji liniowej. 
+\end{DoxyReturn}
+
+
+Definicja w linii \mbox{\hyperlink{_snake_8cpp_source_l00142}{142}} pliku \mbox{\hyperlink{_snake_8cpp_source}{Snake.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordflow}{return}\ a\ +\ t\ *\ (b\ -\/\ a);}
+\DoxyCodeLine{00144\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_snake_a1167820ead0879ef7076a327b231018b}\label{class_snake_a1167820ead0879ef7076a327b231018b} 
+\index{Snake@{Snake}!moveSnake@{moveSnake}}
+\index{moveSnake@{moveSnake}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{moveSnake()}{moveSnake()}}
+{\footnotesize\ttfamily void Snake\+::move\+Snake (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_apple}{Apple}} \texorpdfstring{$\ast$}{*}}]{apple,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_mushroom}{Mushroom}} \texorpdfstring{$\ast$}{*} $>$}]{mushrooms }\end{DoxyParamCaption})}
+
+
+
+Porusza wężem na planszy, uwzględniając kolizje. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em apple} & Wskaźnik do obiektu klasy \doxylink{class_apple}{Apple} reprezentującego jabłko. \\
+\hline
+{\em mushrooms} & Wektor wskaźników do obiektów klasy \doxylink{class_mushroom}{Mushroom} reprezentujących grzyby. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{_snake_8cpp_source_l00034}{34}} pliku \mbox{\hyperlink{_snake_8cpp_source}{Snake.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_snake_a3537b323550e6034df0a19712d63f3ba}{keyAssignment}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{struct_point}{Point}}\ newHead\ =\ body.front();}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{struct_point}{Point}}\ newSegment;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ angle\ =\ 0.0f;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordflow}{switch}\ (dir)\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordflow}{case}\ UP:}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ newHead.\mbox{\hyperlink{struct_point_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y}}\ =\ newHead.\mbox{\hyperlink{struct_point_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y}}\ -\/\ 20;\ \textcolor{comment}{//\ Przesunięcie\ głowy\ węża\ w\ górę}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ newSegment\ =\ \{\ newHead.\mbox{\hyperlink{struct_point_a8c779e11e694b20e0946105a9f5de842}{x}},\ newHead.\mbox{\hyperlink{struct_point_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y}}\ +\ 20\ \};\ \textcolor{comment}{//\ Dodanie\ nowego\ segmentu\ za\ głową\ węża}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ angle\ =\ ALLEGRO\_PI\ /\ 2;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{case}\ DOWN:}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ newHead.\mbox{\hyperlink{struct_point_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y}}\ =\ newHead.\mbox{\hyperlink{struct_point_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y}}\ +\ 20;\ \textcolor{comment}{//\ Przesunięcie\ głowy\ węża\ w\ dół}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ newSegment\ =\ \{\ newHead.\mbox{\hyperlink{struct_point_a8c779e11e694b20e0946105a9f5de842}{x}},\ newHead.\mbox{\hyperlink{struct_point_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y}}\ -\/\ 20\ \};\ \textcolor{comment}{//\ Dodanie\ nowego\ segmentu\ za\ głową\ węża}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ angle\ =\ -\/ALLEGRO\_PI\ /\ 2;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordflow}{case}\ LEFT:}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ newHead.\mbox{\hyperlink{struct_point_a8c779e11e694b20e0946105a9f5de842}{x}}\ =\ newHead.\mbox{\hyperlink{struct_point_a8c779e11e694b20e0946105a9f5de842}{x}}\ -\/\ 20;\ \textcolor{comment}{//\ Przesunięcie\ głowy\ węża\ w\ lewo}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ newSegment\ =\ \{\ newHead.\mbox{\hyperlink{struct_point_a8c779e11e694b20e0946105a9f5de842}{x}}\ +\ 20,\ newHead.\mbox{\hyperlink{struct_point_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y}}\ \};\ \textcolor{comment}{//\ Dodanie\ nowego\ segmentu\ za\ głową\ węża}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ angle\ =\ 0.0f;}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordflow}{case}\ RIGHT:}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ newHead.\mbox{\hyperlink{struct_point_a8c779e11e694b20e0946105a9f5de842}{x}}\ =\ newHead.\mbox{\hyperlink{struct_point_a8c779e11e694b20e0946105a9f5de842}{x}}\ +\ 20;\ \textcolor{comment}{//\ Przesunięcie\ głowy\ węża\ w\ prawo}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ newSegment\ =\ \{\ newHead.\mbox{\hyperlink{struct_point_a8c779e11e694b20e0946105a9f5de842}{x}}\ -\/\ 20,\ newHead.\mbox{\hyperlink{struct_point_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y}}\ \};\ \textcolor{comment}{//\ Dodanie\ nowego\ segmentu\ za\ głową\ węża}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ angle\ =\ ALLEGRO\_PI;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00064\ \ \ \ \ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ body.insert(body.begin(),\ newHead);\ \textcolor{comment}{//\ Dodanie\ nowej\ głowy}}
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{class_snake_aa140a5df9db8650b95ce4fc1d3146d21}{checkCollisionWithApple}}(apple,newSegment,\ newHead);}
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{class_snake_a2a98b43654f9d3ddaca5a0a5a3533047}{chceckCollisionWithWall}}(newHead);}
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{class_snake_ac2ef0a2d37cf8dec668dcc36cab9f0e1}{chceckCollisionWithItself}}(newHead);}
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{class_snake_af26a9e434776eab4c5cc2aafb4bda1e4}{checkCollisionWithMushroom}}(mushrooms,\ newHead);}
+\DoxyCodeLine{00071\ \ \ \ \ body.pop\_back();\ \textcolor{comment}{//\ Usunięcie\ ostatniego\ segmentu\ węża}}
+\DoxyCodeLine{00072\ \}}
+
+\end{DoxyCode}
+
+
+Odwołuje się do \mbox{\hyperlink{_snake_8cpp_source_l00094}{chceck\+Collision\+With\+Itself()}}, \mbox{\hyperlink{_snake_8cpp_source_l00086}{chceck\+Collision\+With\+Wall()}}, \mbox{\hyperlink{_snake_8cpp_source_l00074}{check\+Collision\+With\+Apple()}}, \mbox{\hyperlink{_snake_8cpp_source_l00105}{check\+Collision\+With\+Mushroom()}}, \mbox{\hyperlink{_snake_8cpp_source_l00115}{key\+Assignment()}}, \mbox{\hyperlink{_snake_8h_source_l00021}{Point\+::x}} i \mbox{\hyperlink{_snake_8h_source_l00023}{Point\+::y}}.
+
+\Hypertarget{class_snake_a64e2461770688f757b363125a79e8bcd}\label{class_snake_a64e2461770688f757b363125a79e8bcd} 
+\index{Snake@{Snake}!moveSnakeWithTweening@{moveSnakeWithTweening}}
+\index{moveSnakeWithTweening@{moveSnakeWithTweening}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{moveSnakeWithTweening()}{moveSnakeWithTweening()}}
+{\footnotesize\ttfamily void Snake\+::move\+Snake\+With\+Tweening (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_apple}{Apple}} \texorpdfstring{$\ast$}{*}}]{apple,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_mushroom}{Mushroom}} \texorpdfstring{$\ast$}{*} $>$}]{mushrooms,  }\item[{double}]{elapsed\+Time }\end{DoxyParamCaption})}
+
+
+
+Porusza wężem z uwzględnieniem animacji (tweening). 
+
+
+\begin{DoxyParams}{Parametry}
+{\em apple} & Wskaźnik do obiektu klasy \doxylink{class_apple}{Apple} reprezentującego jabłko. \\
+\hline
+{\em mushrooms} & Wektor wskaźników do obiektów klasy \doxylink{class_mushroom}{Mushroom} reprezentujących grzyby. \\
+\hline
+{\em elapsed\+Time} & Czas, który upłynął od ostatniego kroku animacji. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_snake_a67c7207751c0e51ab6ed56e180f20eef}\label{class_snake_a67c7207751c0e51ab6ed56e180f20eef} 
+\index{Snake@{Snake}!randomize@{randomize}}
+\index{randomize@{randomize}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{randomize()}{randomize()}}
+{\footnotesize\ttfamily void Snake\+::randomize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Losuje nową pozycję węża na planszy. 
+
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_snake_abaf57bf328fb35afc354dae6daf5bfd8}\label{class_snake_abaf57bf328fb35afc354dae6daf5bfd8} 
+\index{Snake@{Snake}!nickName@{nickName}}
+\index{nickName@{nickName}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{nickName}{nickName}}
+{\footnotesize\ttfamily std\+::string Snake\+::nick\+Name}
+
+\texorpdfstring{$<$}{<} Nick gracza. 
+
+Definicja w linii \mbox{\hyperlink{_snake_8h_source_l00050}{50}} pliku \mbox{\hyperlink{_snake_8h_source}{Snake.\+h}}.
+
+\Hypertarget{class_snake_ae5b13aadb0092ce8c45e04de9024444f}\label{class_snake_ae5b13aadb0092ce8c45e04de9024444f} 
+\index{Snake@{Snake}!score@{score}}
+\index{score@{score}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{score}{score}}
+{\footnotesize\ttfamily int Snake\+::score = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+Aktualny wynik gry. 
+
+Definicja w linii \mbox{\hyperlink{_snake_8h_source_l00118}{118}} pliku \mbox{\hyperlink{_snake_8h_source}{Snake.\+h}}.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/karol/\+One\+Drive/\+Pulpit/studia/projekty/\+PROJEKTY\+\_\+\+STUDIA/\+SNAKE/\+SNAKE/\+Pliki nagłówkowe/\mbox{\hyperlink{_snake_8h}{Snake.\+h}}\item 
+C\+:/\+Users/karol/\+One\+Drive/\+Pulpit/studia/projekty/\+PROJEKTY\+\_\+\+STUDIA/\+SNAKE/\+SNAKE/\+Pliki źródłówe/\mbox{\hyperlink{_snake_8cpp}{Snake.\+cpp}}\end{DoxyCompactItemize}

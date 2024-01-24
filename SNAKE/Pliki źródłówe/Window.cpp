@@ -1,3 +1,8 @@
+/** @file Window.cpp
+* @brief Implementacja klasy Window.
+*/
+
+
 #include "Window.h"
 
 ALLEGRO_DISPLAY* Window::disp = NULL;

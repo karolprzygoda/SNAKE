@@ -18,9 +18,12 @@
 class GameOver {
 
 private:
-	static ALLEGRO_SAMPLE* gameoverSound;/**< WskaŸnik do obiektu sampla Allegro 5 reprezentuj¹cego dŸwiêk "burp". */
-	static ALLEGRO_BITMAP* gameover;/**< WskaŸnik do obiektu bitmapy Allegro 5 reprezentuj¹cego ekran koñca gry. */
-	static ALLEGRO_KEYBOARD_STATE keyState;/**< Stan klawiatury Allegro 5 do obs³ugi wejœcia. */
+	/**< WskaŸnik do obiektu sampla Allegro 5 reprezentuj¹cego dŸwiêk "burp". */
+	static ALLEGRO_SAMPLE* gameoverSound;
+	/**< WskaŸnik do obiektu bitmapy Allegro 5 reprezentuj¹cego ekran koñca gry. */
+	static ALLEGRO_BITMAP* gameover;
+	/**< Stan klawiatury Allegro 5 do obs³ugi wejœcia. */
+	static ALLEGRO_KEYBOARD_STATE keyState;
 public:
 	/**
 	 * @brief Wyœwietla ekran koñca gry oraz przechwytuje wejœcie u¿ytkownika.

@@ -1,3 +1,8 @@
+/** @file Menu.cpp
+* @brief Implementacja klasy Menu.
+*/
+
+
 #include "Menu.h"
 #include "CountDown.h"
 

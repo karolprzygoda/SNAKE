@@ -1,3 +1,8 @@
+/** @file GameMode.cpp
+* @brief Implementacja klasy GameMode.
+*/
+
+
 #include "GameMode.h"
 
 ALLEGRO_BITMAP* GameMode::gameModeBtm = nullptr;

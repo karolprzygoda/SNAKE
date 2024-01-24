@@ -1,7 +1,5 @@
 /** @file includes.h
-* Ten plik zawiera wszytskie biblioteki wykorzystywane w projekcie
-*
-*Dodatkowo w pliku zostal umieszczony mechanizm wykrywania czy systemem operacyjnym uzytkownika jest windows
+* @brief Plik zawiera wszytskie biblioteki wykorzystywane w projekcie
 */
 
 #ifndef INCLUDES_H

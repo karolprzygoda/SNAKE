@@ -1,0 +1,51 @@
+\doxysection{Snake.\+h}
+\hypertarget{_snake_8h_source}{}\label{_snake_8h_source}\index{C:/Users/karol/OneDrive/Pulpit/studia/projekty/PROJEKTY\_STUDIA/SNAKE/SNAKE/Pliki nagłówkowe/Snake.h@{C:/Users/karol/OneDrive/Pulpit/studia/projekty/PROJEKTY\_STUDIA/SNAKE/SNAKE/Pliki nagłówkowe/Snake.h}}
+\mbox{\hyperlink{_snake_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00006}00006\ \textcolor{preprocessor}{\#ifndef\ SNAKE\_H}}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00007}00007\ \textcolor{preprocessor}{\#define\ SNAKE\_H}}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{dependencies_8h}{dependencies.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_apple_8h}{Apple.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_mushroom_8h}{Mushroom.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_game_over_8h}{GameOver.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00019}\mbox{\hyperlink{struct_point}{00019}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_point}{Point}}\ \{}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00021}\mbox{\hyperlink{struct_point_a8c779e11e694b20e0946105a9f5de842}{00021}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_point_a8c779e11e694b20e0946105a9f5de842}{x}};}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00023}\mbox{\hyperlink{struct_point_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{00023}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_point_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y}};}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00024}00024\ \};}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00030}\mbox{\hyperlink{class_snake}{00030}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_snake}{Snake}}\ \{}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00031}00031\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00033}00033\ \ \ \ \ std::vector<Point>body;}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00035}00035\ \ \ \ \ \textcolor{keywordtype}{int}\ dir;}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00037}00037\ \ \ \ \ \textcolor{keywordtype}{float}\ angle;}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00039}00039\ \ \ \ \ ALLEGRO\_BITMAP*\ bodyBmp;}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00041}00041\ \ \ \ \ ALLEGRO\_BITMAP*\ headBmp;\ }
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00043}00043\ \ \ \ \ ALLEGRO\_KEYBOARD\_STATE\ keyboard;}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00045}00045\ \ \ \ \ ALLEGRO\_SAMPLE*\ eatingSound;}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00047}00047\ \ \ \ \ \textcolor{keyword}{enum}\ DIRECTION\ \{\ UP,\ DOWN,\ LEFT,\ RIGHT\ \};}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00048}00048\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00050}\mbox{\hyperlink{class_snake_abaf57bf328fb35afc354dae6daf5bfd8}{00050}}\ \ \ \ \ std::string\ \mbox{\hyperlink{class_snake_abaf57bf328fb35afc354dae6daf5bfd8}{nickName}};}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00055}00055\ \ \ \ \ \mbox{\hyperlink{class_snake_aa9cbcdb4b25d84cbf83509039cac8d01}{Snake}}();}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00059}00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_snake_a4a73b9765d6d5fe09e90d55dd200ee69}{displaySnake}}();}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00065}00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_snake_a1167820ead0879ef7076a327b231018b}{moveSnake}}(\mbox{\hyperlink{class_apple}{Apple}}*\ apple,\ std::vector<Mushroom*>\ mushrooms);}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00070}\mbox{\hyperlink{class_snake_a7aee0ab8b45446d0736423b51fd077da}{00070}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_snake_a7aee0ab8b45446d0736423b51fd077da}{getX}}();}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00075}\mbox{\hyperlink{class_snake_aa7bb36db425d5588349de8a8d5b278cf}{00075}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_snake_aa7bb36db425d5588349de8a8d5b278cf}{getY}}();}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00079}\mbox{\hyperlink{class_snake_a67c7207751c0e51ab6ed56e180f20eef}{00079}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_snake_a67c7207751c0e51ab6ed56e180f20eef}{randomize}}();}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00083}00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_snake_a3537b323550e6034df0a19712d63f3ba}{keyAssignment}}();}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00087}00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_snake_a16a910b7a87a6e73c2f60c40971e0d12}{initializeSnake}}();}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00094}00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_snake_aa140a5df9db8650b95ce4fc1d3146d21}{checkCollisionWithApple}}(\mbox{\hyperlink{class_apple}{Apple}}*\ apple,\ \mbox{\hyperlink{struct_point}{Point}}\ newSegment,\ \mbox{\hyperlink{struct_point}{Point}}\ newHead);}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00099}00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_snake_a2a98b43654f9d3ddaca5a0a5a3533047}{chceckCollisionWithWall}}(\mbox{\hyperlink{struct_point}{Point}}\ newHead);}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00104}00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_snake_ac2ef0a2d37cf8dec668dcc36cab9f0e1}{chceckCollisionWithItself}}(\mbox{\hyperlink{struct_point}{Point}}\ newHead);}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00110}00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_snake_af26a9e434776eab4c5cc2aafb4bda1e4}{checkCollisionWithMushroom}}(std::vector<Mushroom*>\ mushrooms,\ \mbox{\hyperlink{struct_point}{Point}}\ newHead);}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00117}\mbox{\hyperlink{class_snake_a64e2461770688f757b363125a79e8bcd}{00117}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_snake_a64e2461770688f757b363125a79e8bcd}{moveSnakeWithTweening}}(\mbox{\hyperlink{class_apple}{Apple}}*\ apple,\ std::vector<Mushroom*>\ mushrooms,\ \textcolor{keywordtype}{double}\ elapsedTime);}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00118}\mbox{\hyperlink{class_snake_ae5b13aadb0092ce8c45e04de9024444f}{00118}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_snake_ae5b13aadb0092ce8c45e04de9024444f}{score}};}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00126}00126\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_snake_adaa30b3e9b9b86e3513cab7bd82153f9}{lerp}}(\textcolor{keywordtype}{float}\ a,\ \textcolor{keywordtype}{float}\ b,\ \textcolor{keywordtype}{float}\ t);}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00127}00127\ \};}
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{_snake_8h_source_l00129}00129\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ SNAKE\_H}}
+
+\end{DoxyCode}

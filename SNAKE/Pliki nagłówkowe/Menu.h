@@ -18,15 +18,24 @@
   */
 class Menu {
 private:
-	static ALLEGRO_BITMAP* menu;/**< WskaŸnik do obiektu bitmapy Allegro 5 reprezentuj¹cego menu g³ówne. */
-	static ALLEGRO_BITMAP* leaderboard;/**< WskaŸnik do obiektu bitmapy Allegro 5 reprezentuj¹cego tablicê wyników. */
-	static ALLEGRO_BITMAP* authors;/**< WskaŸnik do obiektu bitmapy Allegro 5 reprezentuj¹cego informacje o autorach. */
-	static ALLEGRO_BITMAP* rules;/**< WskaŸnik do obiektu bitmapy Allegro 5 reprezentuj¹cego zasady gry. */
-	static ALLEGRO_FONT* font;/**< WskaŸnik do obiektu czcionki Allegro 5 do renderowania tekstu. */
-	static std::ifstream plik;/**< Strumieñ wejœciowy do odczytu danych z pliku. */
-	static ALLEGRO_KEYBOARD_STATE keyboard;/**< Stan klawiatury Allegro 5 do obs³ugi wejœcia. */
-	static bool running;/**< Flaga wskazuj¹ca, czy menu jest wci¹¿ aktywne. */
-	std::vector<int> wynik;/**< Wektor przechowuj¹cy wyniki. */
+	/**< WskaŸnik do obiektu bitmapy Allegro 5 reprezentuj¹cego menu g³ówne. */
+	static ALLEGRO_BITMAP* menu;
+	/**< WskaŸnik do obiektu bitmapy Allegro 5 reprezentuj¹cego tablicê wyników. */
+	static ALLEGRO_BITMAP* leaderboard;
+	/**< WskaŸnik do obiektu bitmapy Allegro 5 reprezentuj¹cego informacje o autorach. */
+	static ALLEGRO_BITMAP* authors;
+	/**< WskaŸnik do obiektu bitmapy Allegro 5 reprezentuj¹cego zasady gry. */
+	static ALLEGRO_BITMAP* rules;
+	/**< WskaŸnik do obiektu czcionki Allegro 5 do renderowania tekstu. */
+	static ALLEGRO_FONT* font;
+	/**< Strumieñ wejœciowy do odczytu danych z pliku. */
+	static std::ifstream plik;
+	/**< Stan klawiatury Allegro 5 do obs³ugi wejœcia. */
+	static ALLEGRO_KEYBOARD_STATE keyboard;
+	/**< Flaga wskazuj¹ca, czy menu jest wci¹¿ aktywne. */
+	static bool running;
+	/**< Wektor przechowuj¹cy wyniki. */
+	std::vector<int> wynik;
 public:
 	/**
 	* @brief Wyœwietla menu g³ówne gry i obs³uguje wejœcie u¿ytkownika.

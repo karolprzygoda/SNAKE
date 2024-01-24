@@ -1,0 +1,122 @@
+\doxysection{Menu.\+cpp}
+\hypertarget{_menu_8cpp_source}{}\label{_menu_8cpp_source}\index{C:/Users/karol/OneDrive/Pulpit/studia/projekty/PROJEKTY\_STUDIA/SNAKE/SNAKE/Pliki źródłówe/Menu.cpp@{C:/Users/karol/OneDrive/Pulpit/studia/projekty/PROJEKTY\_STUDIA/SNAKE/SNAKE/Pliki źródłówe/Menu.cpp}}
+\mbox{\hyperlink{_menu_8cpp}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_menu_8h}{Menu.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_count_down_8h}{CountDown.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00009}00009\ ALLEGRO\_BITMAP*\ Menu::rules\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00010}00010\ ALLEGRO\_BITMAP*\ Menu::menu\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00011}00011\ ALLEGRO\_BITMAP*\ Menu::leaderboard\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00012}00012\ ALLEGRO\_BITMAP*\ Menu::authors\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00013}00013\ ALLEGRO\_FONT*\ Menu::font\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00014}00014\ ALLEGRO\_KEYBOARD\_STATE\ Menu::keyboard;}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00015}00015\ \textcolor{keywordtype}{bool}\ Menu::running\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00017}\mbox{\hyperlink{class_menu_a3afabb3c5a972566e163c2de5f3ff080}{00017}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_a3afabb3c5a972566e163c2de5f3ff080}{Menu::displayMenu}}(ALLEGRO\_EVENT\_QUEUE*\ event\_queue)}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00018}00018\ \{}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00019}00019\ \ \ \ \ \ rules\ =\ al\_load\_bitmap(\textcolor{stringliteral}{"{}Pliki\ zasobow/rules.png"{}});}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00020}00020\ \ \ \ \ \ menu\ =\ al\_load\_bitmap(\textcolor{stringliteral}{"{}Pliki\ zasobow/menu.png"{}});}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00021}00021\ \ \ \ \ \ leaderboard\ =\ al\_load\_bitmap(\textcolor{stringliteral}{"{}Pliki\ zasobow/leaderboard.png"{}});}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00022}00022\ \ \ \ \ \ authors\ =\ al\_load\_bitmap(\textcolor{stringliteral}{"{}Pliki\ zasobow/authors.png"{}});}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00023}00023\ \ \ \ \ \ font\ =\ al\_create\_builtin\_font();}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00025}00025\ \ \ \ \ \ std::vector<std::pair<int,\ std::string>>\ wyniki;}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00027}00027\ \ \ \ \ \ std::ifstream\ plik(\textcolor{stringliteral}{"{}Pliki\ zasobow/wyniki.txt"{}});}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00029}00029\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (plik.is\_open())\ }
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00030}00030\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ liczba;}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ std::string\ nick;}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ ((plik\ >>\ liczba\ >>\ nick))}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ wyniki.push\_back(std::make\_pair(liczba,\ nick));}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ plik.close();}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00038}00038\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00039}00039\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ }
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00040}00040\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Nie\ można\ otworzyć\ pliku."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ plik.close();}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ exit(1);}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00044}00044\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00046}00046\ \ \ \ \ \ \ sort(wyniki.begin(),\ wyniki.end(),\ std::greater<std::pair<int,\ std::string>>());}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00049}00049\ \ \ \ \ \textcolor{keywordflow}{while}(running)}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00050}00050\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ al\_get\_keyboard\_state(\&keyboard);}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ al\_clear\_to\_color(al\_map\_rgb(0,\ 0,\ 0));}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ al\_draw\_bitmap(menu,0,0,0);}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ al\_flip\_display();}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(al\_key\_down(\&keyboard,ALLEGRO\_KEY\_1))}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ al\_flush\_event\_queue(event\_queue);}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ al\_rest(0.2);}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(al\_key\_down(\&keyboard,ALLEGRO\_KEY\_2))}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(!al\_key\_down(\&keyboard,ALLEGRO\_KEY\_ESCAPE))}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ al\_get\_keyboard\_state(\&keyboard);}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ al\_draw\_bitmap(leaderboard,0,0,0);}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00069}00069\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ wysokosc\ =\ 201;\textcolor{comment}{//\ zmienna\ ktora\ okresla\ polozenie\ w\ pionie\ dla\ najelpeszych\ wynikow}}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;i<6;++i)\textcolor{comment}{//wyswietlenie\ najlepszych\ 5\ wynikow}}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ al\_draw\_textf(font,\ al\_map\_rgb(255,\ 255,\ 255),\ 280,\ wysokosc,\ 0,\ \textcolor{stringliteral}{"{}\%d"{}},\ wyniki[i].first);}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ al\_draw\_textf(font,\ al\_map\_rgb(255,\ 255,\ 255),\ 480,\ wysokosc,\ 0,\ \textcolor{stringliteral}{"{}\%s"{}},\ wyniki[i].second.c\_str());}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ wysokosc\ =\ wysokosc\ +\ 50;\textcolor{comment}{//zwiekszenie\ wysokosci\ lepszego\ wyniku\ o\ 50\ pixeli}}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ al\_flip\_display();}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ al\_flush\_event\_queue(event\_queue);}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(al\_key\_down(\&keyboard,ALLEGRO\_KEY\_3))}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(!al\_key\_down(\&keyboard,ALLEGRO\_KEY\_ESCAPE))}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ al\_get\_keyboard\_state(\&keyboard);}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ al\_draw\_bitmap(authors,0,0,0);}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ al\_flip\_display();}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ al\_flush\_event\_queue(event\_queue);}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(al\_key\_down(\&keyboard,ALLEGRO\_KEY\_4))}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(!al\_key\_down(\&keyboard,ALLEGRO\_KEY\_ESCAPE))}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ al\_get\_keyboard\_state(\&keyboard);}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ al\_draw\_bitmap(rules,0,0,0);}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ al\_flip\_display();}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ al\_flush\_event\_queue(event\_queue);}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(al\_key\_down(\&keyboard,ALLEGRO\_KEY\_5))}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ al\_flush\_event\_queue(event\_queue);}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ al\_destroy\_bitmap(rules);}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ al\_destroy\_bitmap(leaderboard);}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ al\_destroy\_bitmap(authors);}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ al\_destroy\_bitmap(menu);}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ exit(0);}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00113}00113\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00114}00114\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00116}00116\ \ \ \ \ al\_destroy\_bitmap(rules);}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00117}00117\ \ \ \ \ al\_destroy\_bitmap(leaderboard);}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00118}00118\ \ \ \ \ al\_destroy\_bitmap(authors);}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00119}00119\ \ \ \ \ al\_destroy\_bitmap(menu);}
+\DoxyCodeLine{\Hypertarget{_menu_8cpp_source_l00120}00120\ \}}
+
+\end{DoxyCode}

@@ -1,3 +1,8 @@
+/** @file EnterNickName.cpp
+* @brief Implementacja klasy EnterNickName.
+*/
+
+
 #include "EnterNickName.h"
 
 ALLEGRO_BITMAP* EnterNickName::window = nullptr;

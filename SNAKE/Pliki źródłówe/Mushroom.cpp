@@ -1,3 +1,8 @@
+/** @file Mushroom.cpp
+* @brief Implementacja klasy Mushroom.
+*/
+
+
 #include "Mushroom.h"
 
 Mushroom::Mushroom()

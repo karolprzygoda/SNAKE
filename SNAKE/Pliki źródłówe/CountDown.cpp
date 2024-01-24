@@ -1,9 +1,10 @@
-#include "CountDown.h"
 
-/** @file odliczanie.c
-* plik zawierajacy kod zrodlowy funkcji odliczanie()
+
+/** @file CountDown.cpp
+* @brief Implementacja klasy CountDown.
 */
 
+#include "CountDown.h"
 ALLEGRO_BITMAP* CountDown::three = nullptr;
 ALLEGRO_BITMAP* CountDown::two = nullptr;
 ALLEGRO_BITMAP* CountDown::one = nullptr;

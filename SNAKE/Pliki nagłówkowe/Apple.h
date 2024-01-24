@@ -15,8 +15,10 @@
  */
 class Apple {
 private:
-	int x;/**< Wspó³rzêdna X pozycji jab³ka. */
-	int y;/**< Wspó³rzêdna Y pozycji jab³ka. */
+	/**< Wspó³rzêdna X pozycji jab³ka. */
+	int x;
+	/**< Wspó³rzêdna Y pozycji jab³ka. */
+	int y;
 	ALLEGRO_BITMAP* appleBmp;/**< WskaŸnik do obiektu bitmapy Allegro 5 reprezentuj¹cego obrazek jab³ka. */
 	public:
 		/**
@@ -29,10 +31,13 @@ private:
 		 */
 		int getX(); 
 		/**
-	   * @brief Funkcja getter dla wspó³rzêdnej Y jab³ka.
-	   * @return Wspó³rzêdna Y jab³ka.
-	   */
+		* @brief Funkcja getter dla wspó³rzêdnej Y jab³ka.
+		* @return Wspó³rzêdna Y jab³ka.
+		*/
 		int getY(); 
+		/**
+		Konstruktor klasy Apple.
+		*/
 		Apple();
 		/**
 		* @brief Wyœwietla jab³ko na ekranie przy u¿yciu funkcji Allegro 5.

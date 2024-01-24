@@ -14,12 +14,17 @@
  */
 class EnterNickName {
 private:
-	static ALLEGRO_BITMAP* window;/**< WskaŸnik do obiektu bitmapy Allegro 5 reprezentuj¹cego okno EnterNickName. */
-	static ALLEGRO_FONT* font;  /**< WskaŸnik do obiektu czcionki Allegro 5 do renderowania tekstu. */
-	static ALLEGRO_KEYBOARD_STATE keyboard; /**< Stan klawiatury Allegro 5 do obs³ugi wejœcia. */
-	static bool running;  /**< Flaga wskazuj¹ca, czy okno EnterNickName jest wci¹¿ aktywne. */
+	/**< WskaŸnik do obiektu bitmapy Allegro 5 reprezentuj¹cego okno EnterNickName. */
+	static ALLEGRO_BITMAP* window;
+	/**< WskaŸnik do obiektu czcionki Allegro 5 do renderowania tekstu. */
+	static ALLEGRO_FONT* font;
+	/**< Stan klawiatury Allegro 5 do obs³ugi wejœcia. */
+	static ALLEGRO_KEYBOARD_STATE keyboard;
+	/**< Flaga wskazuj¹ca, czy okno EnterNickName jest wci¹¿ aktywne. */
+	static bool running; 
 public:
-	static std::string username;  /**< Zmienna przechowuj¹ca nazwê gracza. */
+	/**< Zmienna przechowuj¹ca nazwê gracza. */
+	static std::string username;  
 	/**
 	 * @brief Wyœwietla okno EnterNickName i przechwytuje wejœcie u¿ytkownika w celu wprowadzenia nazwy gracza.
 	 * @param event_queue Kolejka zdarzeñ Allegro 5 do obs³ugi zdarzeñ klawiatury.

@@ -16,9 +16,12 @@
   */
 class Mushroom {
 private:
-	int x;/**< Wspó³rzêdna X po³o¿enia grzyba. */
-	int y;/**< Wspó³rzêdna Y po³o¿enia grzyba. */
-	ALLEGRO_BITMAP* mushroom;/**< WskaŸnik do obiektu bitmapy Allegro 5 reprezentuj¹cego grzyba. */
+	/**< Wspó³rzêdna X po³o¿enia grzyba. */
+	int x;
+	/**< Wspó³rzêdna Y po³o¿enia grzyba. */
+	int y;
+	/**< WskaŸnik do obiektu bitmapy Allegro 5 reprezentuj¹cego grzyba. */
+	ALLEGRO_BITMAP* mushroom;
 public:
 
 	/**

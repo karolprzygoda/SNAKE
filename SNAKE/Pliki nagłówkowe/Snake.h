@@ -17,7 +17,9 @@
   * @brief Struktura reprezentuj¹ca punkt w dwuwymiarowej przestrzeni.
   */
 struct Point {
+	/** Wspó³rzêdna X punktu.*/
 	int x;
+	/** Wspó³rzêdna Y punktu.*/
 	int y;
 };
 
@@ -27,16 +29,25 @@ struct Point {
  */
 class Snake {
 private:
-	std::vector<Point>body;/**< Wektor przechowuj¹cy punkty reprezentuj¹ce cia³o wê¿a. */
-	int dir;/**< Kierunek, w którym porusza siê w¹¿. */
-	float angle; /**< K¹t obrotu g³owy wê¿a. */
-	ALLEGRO_BITMAP* bodyBmp;/**< WskaŸnik do obiektu bitmapy Allegro 5 reprezentuj¹cego cia³o wê¿a. */
-	ALLEGRO_BITMAP* headBmp; /**< WskaŸnik do obiektu bitmapy Allegro 5 reprezentuj¹cego g³owê wê¿a. */
-	ALLEGRO_KEYBOARD_STATE keyboard;/**< Stan klawiatury Allegro 5 do obs³ugi wejœcia. */
-	ALLEGRO_SAMPLE* eatingSound;/**< WskaŸnik do obiektu sampla Allegro 5 reprezentuj¹cego dŸwiêk jedzenia. */
-	enum DIRECTION { UP, DOWN, LEFT, RIGHT };/**< Wyliczenie reprezentuj¹ce kierunki poruszania siê wê¿a. */
+	/**< Wektor przechowuj¹cy punkty reprezentuj¹ce cia³o wê¿a. */
+	std::vector<Point>body;
+	/**< Kierunek, w którym porusza siê w¹¿. */
+	int dir;
+	/**< K¹t obrotu g³owy wê¿a. */
+	float angle;
+	/**< WskaŸnik do obiektu bitmapy Allegro 5 reprezentuj¹cego cia³o wê¿a. */
+	ALLEGRO_BITMAP* bodyBmp;
+	/**< WskaŸnik do obiektu bitmapy Allegro 5 reprezentuj¹cego g³owê wê¿a. */
+	ALLEGRO_BITMAP* headBmp; 
+	/**< Stan klawiatury Allegro 5 do obs³ugi wejœcia. */
+	ALLEGRO_KEYBOARD_STATE keyboard;
+	/**< WskaŸnik do obiektu sampla Allegro 5 reprezentuj¹cego dŸwiêk jedzenia. */
+	ALLEGRO_SAMPLE* eatingSound;
+	/**< Wyliczenie reprezentuj¹ce kierunki poruszania siê wê¿a. */
+	enum DIRECTION { UP, DOWN, LEFT, RIGHT };
 public:
-	std::string nickName;/**< Nick gracza. */
+	/**< Nick gracza. */
+	std::string nickName;
 	/**
 	* @brief Konstruktor klasy Snake.
 	*        Inicjalizuje pocz¹tkowe ustawienia wê¿a.
