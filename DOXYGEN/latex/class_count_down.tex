@@ -1,0 +1,75 @@
+\doxysection{Dokumentacja klasy Count\+Down}
+\hypertarget{class_count_down}{}\label{class_count_down}\index{CountDown@{CountDown}}
+
+
+Klasa reprezentująca odliczanie przed rozpoczęciem rozgrywki.  
+
+
+
+
+{\ttfamily \#include $<$Count\+Down.\+h$>$}
+
+\doxysubsubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_count_down_a3a61368f4cb900a19c6a5660325d4e1e}{display\+Count\+Down}} ()
+\begin{DoxyCompactList}\small\item\em wyswietla cyfry odliczajace przed rozpoczaeciem rozgrywki \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa reprezentująca odliczanie przed rozpoczęciem rozgrywki. 
+
+Definicja w linii \mbox{\hyperlink{_count_down_8h_source_l00016}{16}} pliku \mbox{\hyperlink{_count_down_8h_source}{Count\+Down.\+h}}.
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_count_down_a3a61368f4cb900a19c6a5660325d4e1e}\label{class_count_down_a3a61368f4cb900a19c6a5660325d4e1e} 
+\index{CountDown@{CountDown}!displayCountDown@{displayCountDown}}
+\index{displayCountDown@{displayCountDown}!CountDown@{CountDown}}
+\doxysubsubsection{\texorpdfstring{displayCountDown()}{displayCountDown()}}
+{\footnotesize\ttfamily void Count\+Down\+::display\+Count\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+wyswietla cyfry odliczajace przed rozpoczaeciem rozgrywki 
+
+Glownym i jedynym zadaniem funkcji jest wysiwetlenie 3 bitmap w odstepie 1 sekundy przed rozpoczeciem rozgrywki. Odliczanie zawarte w funkcji ma poinformowac uzytkownika ze rozgrywka zaraz sie rozpocznie. 
+
+Definicja w linii \mbox{\hyperlink{_count_down_8cpp_source_l00013}{13}} pliku \mbox{\hyperlink{_count_down_8cpp_source}{Count\+Down.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ three\ =\ al\_load\_bitmap(\textcolor{stringliteral}{"{}Pliki\ zasobow/3.png"{}});\textcolor{comment}{//wczytanie\ bitapy\ 3}}
+\DoxyCodeLine{00016\ \ \ \ \ \ two\ =\ al\_load\_bitmap(\textcolor{stringliteral}{"{}Pliki\ zasobow/2.png"{}});\textcolor{comment}{//wczytanie\ bitmapy\ 2}}
+\DoxyCodeLine{00017\ \ \ \ \ \ one\ =\ al\_load\_bitmap(\textcolor{stringliteral}{"{}Pliki\ zasobow/1.png"{}});\textcolor{comment}{//wczytanie\ bitmapy\ 1}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordflow}{while}(running)\textcolor{comment}{//petla\ wywolujaca\ bitmapy\ informaujace\ o\ odliczaniu\ do\ rozpoczecia\ rozgrywki}}
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ al\_clear\_to\_color(al\_map\_rgb(0,\ 0,\ 0));\textcolor{comment}{//wyczyszczenie\ ekranu}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ al\_draw\_bitmap(three,0,0,0);\textcolor{comment}{//wyswietlenie\ bitmapy\ 3}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ al\_flip\_display();\textcolor{comment}{//odswiezenie\ ekranu}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ al\_rest(1);\textcolor{comment}{//zatrzymanie\ dzialania\ programu\ na\ sekunde}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ al\_draw\_bitmap(two,0,0,0);\textcolor{comment}{//wyswietlenie\ bitmapy\ 2}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ al\_flip\_display();\textcolor{comment}{//odswiezenie\ ekranu}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ al\_rest(1);\textcolor{comment}{//zatrzymanie\ dzialania\ programu\ na\ sekunde}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ al\_draw\_bitmap(one,0,0,0);\textcolor{comment}{//wyswietlenie\ bitmapy\ 1}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ al\_flip\_display();\textcolor{comment}{//odswiezenie\ ekranu}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ al\_rest(1);\textcolor{comment}{//zatrzymanie\ dzialania\ programu\ na\ sekunde}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ running\ =\ \textcolor{keyword}{false};\textcolor{comment}{//przerwanie\ petli}}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//funkcje\ sluszace\ do\ usuniecia\ wczesniej\ zadeklarowanych\ obiektow\ takich\ jak\ bitmapy\ dzwieki\ czy\ kolejki\ z\ pamieci}}
+\DoxyCodeLine{00034\ \ \ \ \ al\_destroy\_bitmap(three);}
+\DoxyCodeLine{00035\ \ \ \ \ al\_destroy\_bitmap(two);}
+\DoxyCodeLine{00036\ \ \ \ \ al\_destroy\_bitmap(one);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \}}
+
+\end{DoxyCode}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/karol/\+One\+Drive/\+Pulpit/studia/projekty/\+PROJEKTY\+\_\+\+STUDIA/\+SNAKE/\+SNAKE/\+Pliki nagłówkowe/\mbox{\hyperlink{_count_down_8h}{Count\+Down.\+h}}\item 
+C\+:/\+Users/karol/\+One\+Drive/\+Pulpit/studia/projekty/\+PROJEKTY\+\_\+\+STUDIA/\+SNAKE/\+SNAKE/\+Pliki źródłówe/\mbox{\hyperlink{_count_down_8cpp}{Count\+Down.\+cpp}}\end{DoxyCompactItemize}

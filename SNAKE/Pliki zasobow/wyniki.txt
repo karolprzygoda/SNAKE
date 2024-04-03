@@ -1,7 +1,9 @@
 6 Marcin
-5 lukasz
-10 Karol
+5 Lukasz
+10 Dawid
 2 Kuba
-1 xdd
-1 Karol
-1 Karol
+7 Mateusz
+6 Bartek
+13 Pawel
+
+10 Karol

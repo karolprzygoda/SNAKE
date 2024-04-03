@@ -1,0 +1,59 @@
+\doxysection{Dokumentacja klasy Initialize}
+\hypertarget{class_initialize}{}\label{class_initialize}\index{Initialize@{Initialize}}
+
+
+Klasa zawierająca funkcje inicjalizacyjne dla programu.  
+
+
+
+
+{\ttfamily \#include $<$Initialize.\+h$>$}
+
+\doxysubsubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_initialize_a367da41c16fe49b47c736e28f10b7946}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Inicjalizuje różne moduły i zasoby potrzebne do poprawnego działania programu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa zawierająca funkcje inicjalizacyjne dla programu. 
+
+Definicja w linii \mbox{\hyperlink{_initialize_8h_source_l00017}{17}} pliku \mbox{\hyperlink{_initialize_8h_source}{Initialize.\+h}}.
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_initialize_a367da41c16fe49b47c736e28f10b7946}\label{class_initialize_a367da41c16fe49b47c736e28f10b7946} 
+\index{Initialize@{Initialize}!initialize@{initialize}}
+\index{initialize@{initialize}!Initialize@{Initialize}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Initialize\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Inicjalizuje różne moduły i zasoby potrzebne do poprawnego działania programu. 
+
+
+
+Definicja w linii \mbox{\hyperlink{_initialize_8cpp_source_l00008}{8}} pliku \mbox{\hyperlink{_initialize_8cpp_source}{Initialize.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00009\ \ \ \ \ srand(time(NULL));}
+\DoxyCodeLine{00010\ \ \ \ \ al\_init();}
+\DoxyCodeLine{00011\ \ \ \ \ al\_install\_keyboard();}
+\DoxyCodeLine{00012\ \ \ \ \ al\_install\_audio();}
+\DoxyCodeLine{00013\ \ \ \ \ al\_init\_acodec\_addon();}
+\DoxyCodeLine{00014\ \ \ \ \ al\_init\_image\_addon();}
+\DoxyCodeLine{00015\ \ \ \ \ al\_reserve\_samples(3);}
+\DoxyCodeLine{00016\ \}}
+
+\end{DoxyCode}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/karol/\+One\+Drive/\+Pulpit/studia/projekty/\+PROJEKTY\+\_\+\+STUDIA/\+SNAKE/\+SNAKE/\+Pliki nagłówkowe/\mbox{\hyperlink{_initialize_8h}{Initialize.\+h}}\item 
+C\+:/\+Users/karol/\+One\+Drive/\+Pulpit/studia/projekty/\+PROJEKTY\+\_\+\+STUDIA/\+SNAKE/\+SNAKE/\+Pliki źródłówe/\mbox{\hyperlink{_initialize_8cpp}{Initialize.\+cpp}}\end{DoxyCompactItemize}

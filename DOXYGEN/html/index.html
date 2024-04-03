@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SNAKE 3ID14A: Strona glowna dokumentacji</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="favicon.ico"/></td>
+  <td id="projectalign">
+   <div id="projectname">SNAKE 3ID14A<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Strona glowna dokumentacji </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2><a class="anchor" id="autotoc_md0"></a>
+Autorzy</h2>
+<ul>
+<li>Karol Przygoda</li>
+<li>Bartosz SuĹ‚ek</li>
+<li>Grupa: 3ID14A</li>
+<li>Przedmiot: Podstawy Grafiki Komputerowej</li>
+<li>Temat: Implementacja gry <a class="el" href="class_snake.html" title="Klasa reprezentująca obiekt węża w grze.">Snake</a></li>
+</ul>
+<h2><a class="anchor" id="autotoc_md1"></a>
+Informacje wstepne</h2>
+<ul>
+<li>Dokumentacja ta opisuje program <a class="el" href="class_snake.html" title="Klasa reprezentująca obiekt węża w grze.">Snake</a> napisany w jezyku C++ z wykorzystaniem biblioteki graficznej Allegro.</li>
+<li><a class="el" href="class_snake.html" title="Klasa reprezentująca obiekt węża w grze.">Snake</a> to prosta gra polegajaca na poruszaniu sie weza po polu gry i zbieraniu jedzenia w tym przypadku czerwonych jablek.</li>
+<li>Celem gry jest uzyskanie jak najlepszego wyniku punktowego poprzez zbieranie jablek bez dotkniecia scian, trujacych grzbyow lub wlasnego ciala.</li>
+<li>Gra posiada 3 rozne poziomy trudnosci ktore odzwierciedla ilosc grzybow na planszy.</li>
+<li>Uzyskany wynik ma rowniez mozliwosc bycia wyswietlonym w tablicy wynikow jezeli jest wystarczajaco wysoki.</li>
+<li>Program zostal napisany z wykorzystaniem biblioteki Allegro, ktora umozliwia tworzenie grafiki i interfejsu uzytkownika w aplikacjach napisanych w jezyku C/C++. Dzieki temu mozliwe jest stworzenie atrakcyjnego wizualnie interfejsu gry oraz latwe obslugiwanie zdarzen za pomoca klawiatury.</li>
+<li>Dokumentacja ta zawiera opis funkcji i niektorych zmiennych uzytych w programie. Przewodnik ten jest przeznaczony dla osob znajacych podstawy jezyka C i chcacych dowiedziec sie wiecej o tym, jak zostal zaimplementowany <a class="el" href="class_snake.html" title="Klasa reprezentująca obiekt węża w grze.">Snake</a> z wykorzystaniem biblioteki Allegro.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md2"></a>
+Elementy biblioteki Allegro uzyte w projekcie</h2>
+<h3><a class="anchor" id="autotoc_md3"></a>
+Procedury inicializujace</h3>
+<ul>
+<li>al_init() - procedura inicializacji biblioteki allegro</li>
+<li>al_install_keyboard() - procedura inicializujaca obsluge klawiatury w aplikacji</li>
+<li>al_install_audio() - procedura inicializujaca obsluge dziwkow w aplikacji</li>
+<li>al_init_acodec_addon() - procedura inicjalizacji dodatku ACodec (Audio Codec) ktory umozliwia obsluge plikow audio w roznych formatach</li>
+<li>al_init_image_addon() - procedura inicjalizacji dodatku do obslugi obrazow</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md4"></a>
+Funkcje tworzace niezbedne elementy</h3>
+<ul>
+<li>al_create_timer("float" / "float") - funkcja ktora sluzy do tworzenia obiektu timera. Timer to narzedzie, ktore pozwala na wyzwalanie okreslonych zdarzen co jakis czas. Jako argumenty funkcji podajemy czestotliwosc z jaka chcemy aby nasza aplikacja sie odswiezala NP: (1.0/60) - Tworzenie timera z czestotliwoscia 60 klatek na sekunde (60 FPS). Zwraca ona wskaznik na stworzony timer.</li>
+<li>al_create_event_queue() - funkcja ktora sluzy do stworzenia kolejki zdarzen ktora jest narzedziem umozliwiajacym aplikacji rejestrowanie i odbieranie zdarzen jak klikniecia mysza, nacisniecia klawiszy. Funkcja zwaraca wskaznik na utworzona kolejke zdarzen.</li>
+<li>al_create_display(width, height) - funkcja ktora tworzy okno aplikacji. Pierwszym podanym elementem jest szerokosc okna a drugim jego wysokosc (podanych jako liczby calkowite dodatnie). Funkcja zwaraca wskaznik na utworzone okno.</li>
+<li>al_create_builtin_font() - funkcja ktora tworzy czcionke wbudowana czyli taka ktora jest bezposrednio dostepna w bibliotece Allegro. Funkcja zwarca wskaznik na utworzona czcionke.</li>
+<li>al_create_sample_instance(song) - funkjca sluzy do tworzenia instancji probki dzwiekowej. Instancja probki dzwiekowej to obiekt, ktory reprezentuje konkretne wystapienie dzwieku w aplikacji. Mozna utworzyc wiele instancji tego samego dzwieku i odtwarzac je w roznych miejscach lub z roznymi ustawieniami, takimi jak glosnosc, panowanie czy predkosc odtwarzania. Jako argument nalezy podac zmienna ktora posiada wskaznik na plik z dzwiekiem ktory chcemy zmodyfikowac. Funkcja zwraca wskaznik na utworzona instancje.</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md5"></a>
+Funckje wczytujace</h3>
+<ul>
+<li>al_load_sample(nazwa.rozszerzenie) - funcja wczytujaca probke dzwieku podanej jako argument ktorym jest nazwa pliku dzwiekowego wraz z jego rozszerzeniem. Zwraca wsaznik na podany plik.</li>
+<li>al_load_bitmap("nazwa.rozszerzenie") - funkcja wczytujaca obraz podano jako argument ktorym jest nazwa pliku w ktorym znajduje sie pozadnay obraz wraz z jego rozszerzeniem.Zwraca wskaznik na podany plik.</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md6"></a>
+Dodatkowe funkcje</h3>
+<ul>
+<li>al_set_window_position(disp,argument2,argument3) - funkcja ktora ustawia pozycje okna na ekranie jako argumenty nalezy podac 1.wskaznik na okno 2.wspolzedna w poziomie 3. wspolzedna w pionie (w pixelach)</li>
+<li>al_set_window_title(disp,"tytul") - funkcja ktora ustawia tytul aplikacji na wprowadzony jako drugi argument funkcji, pierwszym argumentem funkcji jest wskaznik na okno w ktorym chcemy ustawic tytul</li>
+<li>al_reserve_samples("int") - funkcja, ktora sluzy do rezerwowania miejsca dla probek dzwieku. Probki dzwieku to nagrania dzwieku, ktore moga byc odtwarzane przez biblioteke Allegro. Jako argument nalezy podac ilosc probek (liczbe calkowita dodatnia) ktore maja zostac zarezerwowane.</li>
+<li>al_set_sample_instance_playmode(argument,2argument) - funkcja ktora sluzy do ustawienie trybu odtwarzania dla instacji probki dziwkowej. Jako pierwszy argument nalezy podac wskaznik na instacje probki a jako drugi argument tryb odtwarzania.</li>
+<li>al_attach_sample_instance_to_mixer(argument, 2argument) - funkcja ktora sluzy do przypisania instancji probki dzwiekowej do miksera. Mikser to obiekt, ktory pozwala na odtwarzanie wielu dzwiekow jednoczesnie i laczenie ich w jeden efekt dzwiekowy. Jako argumenty nalezy podac 1.wskaznik na instacje probki 2.mikser do ktorego chcemy przylaczyc instancje</li>
+<li>al_set_display_icon(disp,ikona) - funckja ktora sluzy do ustawienia ikony projektu. Jako pierwszy argument nalezy podac wskaznik na uzywane okno jako drugi argument nalezy podac wskaznik na plik w ktorym ikona sie znajduje</li>
+<li>al_register_event_source(argument,2argument) - funkcja , ktora sluzy do rejestrowania zrodla zdarzen w kolejce zdarzen. Pierwszym argumentem jest kolejka zdarzen drugim natomiast zdarzenie ktore ma byc obslugiwane np obsluga klawiatury</li>
+<li>al_rest(argument) - funkcja ktora zatrzymuje dzialanie aplikacji na czas podany w argumencie w sekundach jako liczba rzeczywista dodatnia.</li>
+<li>al_clear_to_color() - funkcja, ktora sluzy do wyczyszczenia ekranu do okreslonego koloru podanego w argumencie jako inna funcja al_map_rgb(0, 0, 0).</li>
+<li>al_map_rgb(0, 0, 0) - funckja ustawiajaca kolor podany w argumentach.</li>
+<li>al_draw_bitmap(wskaznik,0,0,0) - funkcja wyswietlajaca bitmape. Argumentami funkcji sa 1.wskaznik na pozadana bitmape 2. kolor kotry ma byc uzupelniem bitmapy 3. -||- 4. -||-.</li>
+<li>al_flip_display() - funkcja odswiezajaca ekran.</li>
+<li>al_get_keyboard_state(&amp;KeyState) - funkcja ktora pobiera stan klawiatury. Jako argument nalezy podac wskaznik na stan klawiatury.</li>
+<li>al_key_down() - funkcja , ktora sluzy do sprawdzenia, czy dany klawisz jest wcisniety.</li>
+<li>al_play_sample_instance(SongInstance) - funkcja, ktora sluzy do odtwarzania dzwieku za pomoca instancji probki dzwiekowej. Jako argument nalezy podac wskaznik na instacje probki dzwiekowej.</li>
+<li>al_start_timer(timer) - funkcja, ktora sluzy do uruchomienia licznika czasu. Jako argument nalezy podac wskaznik na licznik czasu.</li>
+<li>al_draw_textf() - funckja ktora wypisuje tekst na ekranie. Jako argumenty nalezy podac wskaznik na czcionke, kolor czcionki, miejsce wyswietlenia oraz tekst jaki ma zostac wyswietlony.</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md7"></a>
+Funkcje usuwajace</h3>
+<ul>
+<li>al_destroy_bitmap() - funkcja usuwa bitmape z pamieci. Jako argument nalezy podac wskaznik na plik zawierajacy bitmape.</li>
+<li>al_destroy_sample_instance() - funkcja usuwa instancje dzwieku z pamieci. Jako argument nalezy podac wskaznik na instacje dzwieku.</li>
+<li>al_destroy_display() - funkcja usuwajaca okno aplikacji z pamieci. Jako argument nalezy podac wskaznik na okno aplikacji.</li>
+<li>al_destroy_timer() - funkcja usuwajaca licznik czasu z pamieci. Jako argument nalezy podac wskaznik na licznik czasu.</li>
+<li>al_destroy_event_queue() - funkcja usuwajaca kolejke zdarzen z pamieci. Jako argument nalezy podac wskaznik na kolejke zdarzen.</li>
+</ul>
+<dl class="section note"><dt>Nota</dt><dd></dd></dl>
+<ul>
+<li>Program posiada pliki z rozszerzeniem .cpp w kotrych zawarte sa wnetrza opisywnaych funkcji aplikacji. W dokumentacji wyswietlane beda tylko pliki naglowkowe oraz plik zawierajacy funkcje glowna <a class="el" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a> w celu unikniecia redundancji informacji o projekcie.</li>
+<li>W programie uzyta jest biblioteka systemowa systemu Operacyjnego Windows ktora zostala uzyta w celu "schowania" okna konsoli programu. Jezeli uzytkownik korzysta z innego systemu operacyjnego konsola bedzie dalej widoczna natomiast nie jest konieczne usuwanie badz komentowanie linijek kodu odpowiedzialnych za te opreracje poniewaz w aplikacji zostal zaimplementowany mechaniznm wykrywania systemu operacyjnego windows. </li>
+</ul>
+</div></div><!-- PageDoc -->
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

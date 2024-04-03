@@ -1,0 +1,134 @@
+\doxysection{Dokumentacja klasy Mushroom}
+\hypertarget{class_mushroom}{}\label{class_mushroom}\index{Mushroom@{Mushroom}}
+
+
+Klasa reprezentująca obiekt grzyba w grze.  
+
+
+
+
+{\ttfamily \#include $<$Mushroom.\+h$>$}
+
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_mushroom_a05296a52f17a811b47e7f75fabe00e45}{getX}} ()
+\begin{DoxyCompactList}\small\item\em Zwraca współrzędną X położenia grzyba. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_mushroom_a50a3f8ff5954a983ecd5af3ced2d5b0c}{getY}} ()
+\begin{DoxyCompactList}\small\item\em Zwraca współrzędną Y położenia grzyba. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mushroom_a22bb996d4d9b5c09463bd570334bb5df}{Mushroom}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_mushroom}{Mushroom}. Inicjalizuje położenie grzyba. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mushroom_aba081c62d8d87e69ddc40dad3eed6a60}{display\+Mushroom}} ()
+\begin{DoxyCompactList}\small\item\em Wyświetla obraz grzyba na ekranie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa reprezentująca obiekt grzyba w grze. 
+
+Definicja w linii \mbox{\hyperlink{_mushroom_8h_source_l00017}{17}} pliku \mbox{\hyperlink{_mushroom_8h_source}{Mushroom.\+h}}.
+
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_mushroom_a22bb996d4d9b5c09463bd570334bb5df}\label{class_mushroom_a22bb996d4d9b5c09463bd570334bb5df} 
+\index{Mushroom@{Mushroom}!Mushroom@{Mushroom}}
+\index{Mushroom@{Mushroom}!Mushroom@{Mushroom}}
+\doxysubsubsection{\texorpdfstring{Mushroom()}{Mushroom()}}
+{\footnotesize\ttfamily Mushroom\+::\+Mushroom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Konstruktor klasy \doxylink{class_mushroom}{Mushroom}. Inicjalizuje położenie grzyba. 
+
+
+
+Definicja w linii \mbox{\hyperlink{_mushroom_8cpp_source_l00008}{8}} pliku \mbox{\hyperlink{_mushroom_8cpp_source}{Mushroom.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ mushroom\ =\ al\_load\_bitmap(\textcolor{stringliteral}{"{}Pliki\ zasobow/mushroom.png"{}});}
+\DoxyCodeLine{00011\ \ \ \ \ x\ =\ (1\ +\ rand()\ \%\ (30))\ *\ 20;}
+\DoxyCodeLine{00012\ \ \ \ \ y\ =\ (1\ +\ rand()\ \%\ (22))\ *\ 20;}
+\DoxyCodeLine{00013\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_mushroom_aba081c62d8d87e69ddc40dad3eed6a60}\label{class_mushroom_aba081c62d8d87e69ddc40dad3eed6a60} 
+\index{Mushroom@{Mushroom}!displayMushroom@{displayMushroom}}
+\index{displayMushroom@{displayMushroom}!Mushroom@{Mushroom}}
+\doxysubsubsection{\texorpdfstring{displayMushroom()}{displayMushroom()}}
+{\footnotesize\ttfamily void Mushroom\+::display\+Mushroom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Wyświetla obraz grzyba na ekranie. 
+
+
+
+Definicja w linii \mbox{\hyperlink{_mushroom_8cpp_source_l00015}{15}} pliku \mbox{\hyperlink{_mushroom_8cpp_source}{Mushroom.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ al\_draw\_bitmap(mushroom,\ x,\ y,\ 0);}
+\DoxyCodeLine{00019\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_mushroom_a05296a52f17a811b47e7f75fabe00e45}\label{class_mushroom_a05296a52f17a811b47e7f75fabe00e45} 
+\index{Mushroom@{Mushroom}!getX@{getX}}
+\index{getX@{getX}!Mushroom@{Mushroom}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily int Mushroom\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Zwraca współrzędną X położenia grzyba. 
+
+\begin{DoxyReturn}{Zwraca}
+Współrzędna X położenia grzyba. 
+\end{DoxyReturn}
+
+
+Definicja w linii \mbox{\hyperlink{_mushroom_8cpp_source_l00021}{21}} pliku \mbox{\hyperlink{_mushroom_8cpp_source}{Mushroom.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{return}\ x;}
+\DoxyCodeLine{00024\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_mushroom_a50a3f8ff5954a983ecd5af3ced2d5b0c}\label{class_mushroom_a50a3f8ff5954a983ecd5af3ced2d5b0c} 
+\index{Mushroom@{Mushroom}!getY@{getY}}
+\index{getY@{getY}!Mushroom@{Mushroom}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily int Mushroom\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Zwraca współrzędną Y położenia grzyba. 
+
+\begin{DoxyReturn}{Zwraca}
+Współrzędna Y położenia grzyba. 
+\end{DoxyReturn}
+
+
+Definicja w linii \mbox{\hyperlink{_mushroom_8cpp_source_l00026}{26}} pliku \mbox{\hyperlink{_mushroom_8cpp_source}{Mushroom.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{return}\ y;}
+\DoxyCodeLine{00029\ \}}
+
+\end{DoxyCode}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/karol/\+One\+Drive/\+Pulpit/studia/projekty/\+PROJEKTY\+\_\+\+STUDIA/\+SNAKE/\+SNAKE/\+Pliki nagłówkowe/\mbox{\hyperlink{_mushroom_8h}{Mushroom.\+h}}\item 
+C\+:/\+Users/karol/\+One\+Drive/\+Pulpit/studia/projekty/\+PROJEKTY\+\_\+\+STUDIA/\+SNAKE/\+SNAKE/\+Pliki źródłówe/\mbox{\hyperlink{_mushroom_8cpp}{Mushroom.\+cpp}}\end{DoxyCompactItemize}
